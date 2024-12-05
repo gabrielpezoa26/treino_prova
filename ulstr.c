@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 10:19:18 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/05 10:27:03 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/12/05 12:09:42 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 char	*mango_loko(char *string)
 {
 	int	index;
-
 	index = 0;
 	while (string[index] != '\0')
 	{

@@ -6,11 +6,12 @@
 /*   By: gcesar-n <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 10:27:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/05 10:48:41 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/12/05 11:37:52 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 char	*first_word(char *input)
 {
@@ -18,13 +19,13 @@ char	*first_word(char *input)
 	char	*result;
 
 	index = 0;
-	if (input[index] >= 0 &&  input[index] <= 32)
+	if (input[index] >= 0 && input[index] <= 32)
 	{
-		write(1, '\n', 1);
+		write(1, "\n", 2);
 	}	
-	while (input[index] != '\0')
+	while (input[index] != '\0' || result[index] == '\0')
 	{
-		*result[index] = input[index];
+		result[index] = input[index];
 		index++;
 		if (input[index] == 32 || input[index] == 9)
 			return (result);
@@ -32,9 +33,11 @@ char	*first_word(char *input)
 	return (result);
 }
 
-int	main(int argc, char **argv)
+int	main(void)
 {
+	char	mango_loko[] = "aaa bbb";
 
+	printf("%s", first_word(mango_loko));
 }
 
 
@@ -62,4 +65,3 @@ $> ./first_word "a" "b" | cat -e
 $
 $> ./first_word "  lorem,ipsum  " | cat -e
 lorem,ipsum$*/
-$>
