@@ -6,7 +6,7 @@
 /*   By: gcesar-n <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 10:27:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/05 11:37:52 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/12/05 13:50:04 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,21 @@
 char	*first_word(char *input)
 {
 	int	index;
-	char	*result;
+	char	result[256];
 
 	index = 0;
 	if (input[index] >= 0 && input[index] <= 32)
 	{
 		write(1, "\n", 2);
 	}	
-	while (input[index] != '\0' || result[index] == '\0')
+	while (input[index] != '\0')
 	{
 		result[index] = input[index];
 		index++;
 		if (input[index] == 32 || input[index] == 9)
 			return (result);
 	}
-	return (result);
+	return (*result);
 }
 
 int	main(void)
@@ -38,6 +38,7 @@ int	main(void)
 	char	mango_loko[] = "aaa bbb";
 
 	printf("%s", first_word(mango_loko));
+	return (0);
 }
 
 
