@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:39:03 by gabriel           #+#    #+#             */
-/*   Updated: 2024/12/10 11:41:28 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/12/10 16:36:48 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,33 @@
 
 int	main(void)
 {
-	char	*string;
 	int		i;
+	int		j;
+	int		alpha_index;
 	char	*lwr_alphabet;
 	char	*upp_alphabet;
-	int		alpha_index;
 
-	i = 26;
+	char	*string = "abcd"; //trocar p argc argv
+
 	lwr_alphabet = "abcdefghijklmnopqrstuvwxyz";
 	upp_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	write(1, &lwr_alphabet[i], 1);
+	alpha_index = 
+	i = 0;
+	j = 0;
+	while(string[i] != '\0')
+	{
+		if (string[j] >= 'a' && string[j] <= 'z')
+		{
+			write (1, &string[i], 1);
+			j++;
+		}
+		else if (string[j] >= 'A' && string[j] <= 'Z')
+		{
+			write (1, &string[i], 1);
+			j++;
+		}
+		i++;
+	}
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 10:27:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/10 11:07:41 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/12/10 17:27:30 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,36 +15,25 @@
 
 char	*first_word(char *input)
 {
-	int	index;
-	char	result[256];
+	int		i;
+	static char	result[100];
 
-	index = 0;
-	if (input[index] >= 0 && input[index] <= 32)
+	i = 0;
+	while ((input[i] != '\0') && (input[i] != ' ' && input[i] != '\t'))
 	{
-		write(1, "\n", 2);
-	}	
-	while (input[index] != '\0')
-	{
-		result[index] = input[index];
-		index++;
-		if (input[index] == 32 || input[index] == 9)
-			return (result);
+		result[i] = input[i];
+		i++;
 	}
-	return (*result);
+	return (result);
 }
 
 int	main(void)
 {
-	char	mango_loko[] = "aaa bbb";
+	char	mango_loko[] = "aadasdsaa bbb ccc"; //trocar p argc argv
 
 	printf("%s", first_word(mango_loko));
 	return (0);
 }
-
-
-
-
-
 /*Write a program that takes a string and displays its first word, followed by a
 newline.
 
