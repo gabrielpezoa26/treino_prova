@@ -3,24 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   repeat_alpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:39:03 by gabriel           #+#    #+#             */
-/*   Updated: 2024/12/09 17:39:42 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/12/10 11:41:28 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-void	mango_loko(*input)
-{
-
-}
-
 int	main(void)
 {
-	
+	char	*string;
+	int		i;
+	char	*lwr_alphabet;
+	char	*upp_alphabet;
+	int		alpha_index;
+
+	i = 26;
+	lwr_alphabet = "abcdefghijklmnopqrstuvwxyz";
+	upp_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	write(1, &lwr_alphabet[i], 1);
+	return (0);
 }
 
 
