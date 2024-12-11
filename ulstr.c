@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ulstr.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 10:19:18 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/05 12:09:42 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/12/11 12:32:17 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 char	*mango_loko(char *string)
 {
 	int	index;
+
 	index = 0;
 	while (string[index] != '\0')
 	{
@@ -27,13 +28,24 @@ char	*mango_loko(char *string)
 	}
 	return (string);
 }
-/*
-int	main(void)
-{
-	char	example[] = "abC";
 
-	printf("%s\n", mango_loko(example));
-}*/
+int	main(int argc, char **argv)
+{
+	if (argc != 2)
+	{
+		write(1, "\n", 1);
+		return (0);
+	}
+
+	char *result = mango_loko(argv[1]);
+	int len = 0;
+	while (result[len] != '\0')
+		len++;
+
+	write(1, result, len);
+	write(1, "\n", 1);
+	return (0);
+}
 
 /*
 	Assignment name  : ulstr
