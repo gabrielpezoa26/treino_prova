@@ -3,48 +3,53 @@
 /*                                                        :::      ::::::::   */
 /*   repeat_alpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:39:03 by gabriel           #+#    #+#             */
-/*   Updated: 2024/12/10 16:36:48 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/12/11 12:57:01 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	int		i;
-	int		j;
-	int		alpha_index;
-	char	*lwr_alphabet;
-	char	*upp_alphabet;
+	int	index;
+	int	jindex;
+	int	times_to_print;
 
-	char	*string = "abcd"; //trocar p argc argv
-
-	lwr_alphabet = "abcdefghijklmnopqrstuvwxyz";
-	upp_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	alpha_index = 
-	i = 0;
-	j = 0;
-	while(string[i] != '\0')
+	if (argc != 2)
 	{
-		if (string[j] >= 'a' && string[j] <= 'z')
-		{
-			write (1, &string[i], 1);
-			j++;
-		}
-		else if (string[j] >= 'A' && string[j] <= 'Z')
-		{
-			write (1, &string[i], 1);
-			j++;
-		}
-		i++;
+		write(1, "\n", 1);
+		return (1);
 	}
+	index = 0;
+	while (argv[1][index] != '\0')
+	{
+		if (argv[1][index] >= 'a' && argv[1][index] <= 'z')
+		{
+			times_to_print = argv[1][index] - 96;
+		}
+		else if (argv[1][index] >= 'A' && argv[1][index] <= 'Z')
+		{
+			times_to_print = argv[1][index] - 64;
+		}
+		else
+		{
+			times_to_print = 1;
+		}
+		jindex = 0;
+		while (jindex < times_to_print)
+		{
+			write(1, &argv[1][index], 1);
+			jindex++;
+		}
+		index++;
+	}
+	write(1, "\n", 1);
 	return (0);
 }
-
 
 /*Assignment name  : repeat_alpha
 Expected files   : repeat_alpha.c

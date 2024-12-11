@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:06:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/09 15:45:42 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/12/11 12:34:26 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,5 @@ void	fizzbuzz(void)
 int	main(void)
 {
 	fizzbuzz();
+	return (0);
 }
