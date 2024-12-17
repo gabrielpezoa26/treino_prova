@@ -1,3 +1,5 @@
+*
+
 # Don't ignore these file types
 !*.c
 !*.h
