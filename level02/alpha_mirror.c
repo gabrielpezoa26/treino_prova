@@ -6,15 +6,15 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 20:30:42 by gabriel           #+#    #+#             */
-/*   Updated: 2024/12/17 20:31:50 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/12/18 11:00:11 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdio.h>
-
 int	main(void) //trocar p argc && argv
 {
-	
+	int alpha_index;
 }
 /*
 Assignment name  : alpha_mirror
