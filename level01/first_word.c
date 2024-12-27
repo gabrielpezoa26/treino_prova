@@ -3,36 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   first_word.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 10:27:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/10 17:43:03 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2024/12/27 12:08:16 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-char	*first_word(char *input)
+int main(int argc, char **argv)
 {
-	int		i;
-	static char	result[100];
+	int i;
 
 	i = 0;
-	while ((input[i] != '\0') && (input[i] != ' ' && input[i] != '\t'))
+	if (argc == 2)
 	{
-		result[i] = input[i];
-		i++;
+		while (argv[1][i] == 32 || argv[1][i] == 9)
+			i++;
+		while (argv[1][i] && (argv[1][i] != 32 && argv[1][i] != 9))
+		{
+			write(1, &argv[1][i], 1);
+			i++;
+		}
 	}
-	return (result);
-}
-
-int	main(void)
-{
-	char	mango_loko[] = "aadasdsaa bbb ccc"; //trocar p argc argv
-
-	printf("%s", first_word(mango_loko));
-	return (0);
+	write(1, "\n", 1);
 }
 /*Write a program that takes a string and displays its first word, followed by a
 newline.

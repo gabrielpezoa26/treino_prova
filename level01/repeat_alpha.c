@@ -6,50 +6,41 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:39:03 by gabriel           #+#    #+#             */
-/*   Updated: 2024/12/11 12:57:01 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/12/27 12:31:51 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	int	index;
-	int	jindex;
-	int	times_to_print;
+	int	i;
+	int	count;
 
-	if (argc != 2)
+	if (argc == 2)
 	{
-		write(1, "\n", 1);
-		return (1);
-	}
-	index = 0;
-	while (argv[1][index] != '\0')
-	{
-		if (argv[1][index] >= 'a' && argv[1][index] <= 'z')
+		i = 0;
+		while (argv[1][i] != '\0')
 		{
-			times_to_print = argv[1][index] - 96;
+			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+				count = argv[1][i] - 'a' + 1;
+			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
+				count = argv[1][i] - 'A' + 1;
+			else
+				count = 1;
+			while (count > 0)
+			{
+				write(1, &argv[1][i], 1);
+				count--;
+			}
+			i++;
 		}
-		else if (argv[1][index] >= 'A' && argv[1][index] <= 'Z')
-		{
-			times_to_print = argv[1][index] - 64;
-		}
-		else
-		{
-			times_to_print = 1;
-		}
-		jindex = 0;
-		while (jindex < times_to_print)
-		{
-			write(1, &argv[1][index], 1);
-			jindex++;
-		}
-		index++;
 	}
 	write(1, "\n", 1);
 	return (0);
 }
+
+
 
 /*Assignment name  : repeat_alpha
 Expected files   : repeat_alpha.c
