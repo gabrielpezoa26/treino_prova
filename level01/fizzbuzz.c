@@ -6,46 +6,64 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:06:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/11 12:34:26 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/05 18:21:08 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print_number(int katana)
+void	mango_loko(int number)  //p conseguir imprimir numero, recursivo
 {
-	char	digit;
+	char	str[10] = "0123456789";
 
-	if (katana >= 10)
-		print_number(katana / 10);
-	digit = (katana % 10) + '0';
-	write(1, &digit, 1);
+	if (number > 9)
+		mango_loko(number / 10);
+	write (1, &str[number % 10], 1);
 }
 
-void	fizzbuzz(void)
+int		main()
 {
-	int number;
+	int i = 1;
 
-	number = 1;
-	while (number <= 100)
+	while (i <= 100)
 	{
-		if (number % 3 == 0 && number % 5 == 0)
-			write(1, "fizzbuzz\n", 9);
-		else if (number % 3 == 0)
-			write(1, "fizz\n", 5);
-		else if (number % 5 == 0)
-			write(1, "buzz\n", 5);
-		else
+		if (i % 15 == 0)
 		{
-			print_number(number);
-			write(1, "\n", 1);
+			write (1, "fizzbuzz", 8);
 		}
-		number++;
+		else if (i % 3 == 0)
+		{
+			write (1, "fizz", 4);
+		}
+		else if (i % 5 == 0)
+		{
+			write (1, "buzz", 4);
+		}
+		else
+			mango_loko(i);
+		i++;
+		write (1, "\n", 1);
 	}
 }
+/*Assignment name  : fizzbuzz
+Expected files   : fizzbuzz.c
+Allowed functions: write
+--------------------------------------------------------------------------------
 
-int	main(void)
-{
-	fizzbuzz();
-	return (0);
-}
+Write a program that prints the numbers from 1 to 100, each separated by a
+newline.
+
+If the number is a multiple of 3, it prints 'fizz' instead.
+
+If the number is a multiple of 5, it prints 'buzz' instead.
+
+If the number is both a multiple of 3 and a multiple of 5, it prints 'fizzbuzz' instead.
+
+Example:
+
+$>./fizzbuzz
+1
+2
+fizz
+4
+buzz*/

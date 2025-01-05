@@ -6,45 +6,33 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 10:19:18 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/11 12:32:17 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/05 18:12:06 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-char	*mango_loko(char *string)
+int main(int argc, char **argv)
 {
-	int	index;
+	int	i = 0;
 
-	index = 0;
-	while (string[index] != '\0')
+	if (argc == 2)
 	{
-		if (string[index] >= 'a' && string[index] <= 'z')
-			string[index] -= 32;
-		else if (string[index] >= 'A' && string [index] <= 'Z')
-			string[index] += 32;
-		index++;
+		while (argv[1][i] != '\0')
+		{
+			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+			{
+				argv[1][i] -= 32;
+			}
+			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
+			{
+				argv[1][i] += 32;
+			}
+			write(1, &argv[1][i], 1);
+			i++;	
+		}
 	}
-	return (string);
-}
-
-int	main(int argc, char **argv)
-{
-	if (argc != 2)
-	{
-		write(1, "\n", 1);
-		return (0);
-	}
-
-	char *result = mango_loko(argv[1]);
-	int len = 0;
-	while (result[len] != '\0')
-		len++;
-
-	write(1, result, len);
 	write(1, "\n", 1);
-	return (0);
 }
 
 /*

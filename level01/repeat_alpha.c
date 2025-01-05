@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:39:03 by gabriel           #+#    #+#             */
-/*   Updated: 2024/12/27 12:31:51 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/05 18:25:05 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,16 @@ int main(int argc, char **argv)
 	if (argc == 2)
 	{
 		i = 0;
-		while (argv[1][i] != '\0')
+		while (argv[1][i] != '\0')  //p percorrer ate o final
 		{
-			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')  //validaçao de caso seja letra 
+			{
 				count = argv[1][i] - 'a' + 1;
-			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
+			}
+			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')  ////validaçao de caso seja letra 
+			{
 				count = argv[1][i] - 'A' + 1;
+			}
 			else
 				count = 1;
 			while (count > 0)
@@ -39,8 +43,6 @@ int main(int argc, char **argv)
 	write(1, "\n", 1);
 	return (0);
 }
-
-
 
 /*Assignment name  : repeat_alpha
 Expected files   : repeat_alpha.c

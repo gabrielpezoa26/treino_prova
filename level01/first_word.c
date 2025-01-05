@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 10:27:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/27 12:08:16 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/05 18:16:34 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ int main(int argc, char **argv)
 	i = 0;
 	if (argc == 2)
 	{
-		while (argv[1][i] == 32 || argv[1][i] == 9)
-			i++;
-		while (argv[1][i] && (argv[1][i] != 32 && argv[1][i] != 9))
+		while (argv[1][i] == 32 || argv[1][i] == 9)  //anda pelos espaços e tab
 		{
-			write(1, &argv[1][i], 1);
+			i++;
+		}
+		while (argv[1][i] && (argv[1][i] != 32 && argv[1][i] != 9))  //enqt argv for diferente de \0, espaços e tabs
+		{
+			write(1, &argv[1][i], 1);  //escreve o caracter atual
 			i++;
 		}
 	}
