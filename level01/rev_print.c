@@ -6,12 +6,11 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 18:29:24 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/05 18:37:12 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/05 18:48:26 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 int	ft_strlen(char *s)
 {
@@ -24,15 +23,15 @@ int	ft_strlen(char *s)
 	}
 	return (j);
 }
-//			write(1, &argv[1][i], 1);
+
 char *rev_print(char *str)
 {
 	int size;
-	int k;
-	size = ft_strlen(str);
-	while (size > 0)
+
+	size = ft_strlen(str) - 1;  // '-1' pra remover o '\0', se nao da merda
+	while (str[size] > 0)  //itera do avesso
 	{
-		write(1, &k, 1);
+		write(1, &str[size], 1);
 		size--;
 	}
 	return (str);
