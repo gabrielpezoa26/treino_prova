@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 18:29:24 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/05 18:48:26 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/05 18:49:24 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ char *rev_print(char *str)
 	size = ft_strlen(str) - 1;  // '-1' pra remover o '\0', se nao da merda
 	while (str[size] > 0)  //itera do avesso
 	{
-		write(1, &str[size], 1);
-		size--;
+		write(1, &str[size], 1);  //printa na posicao
+		size--;  //itera do avesso
 	}
 	return (str);
 }
