@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 16:22:39 by gabriel           #+#    #+#             */
-/*   Updated: 2024/12/15 16:29:08 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/06 14:04:05 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,31 @@
 int	ft_atoi(const char *str)
 {
 	int	i;
-	int	mango_loko;
+	int	number;
 	int	signal;
 
 	i = 0;
-	mango_loko = 0;
+	number = 0;
 	signal = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)  //percorre os tabs espaços etc
 	{
 		i++;
 	}
 	if (str[i] == '-')
 	{
-		signal = (-1);
+		signal = (-1);  //transforma em negativo se for '-'
 		i++;
 	}
 	else if (str[i] == '+')
 		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	while (str[i] >= '0' && str[i] <= '9')  //verifica se é um digito unico
 	{
-		mango_loko = mango_loko * 10 + (str[i] - '0');
-		i++;
+		number = number * 10 + (str[i] - '0');  //transforma de fato LEMBRAR DAS ASPAS
+		i++;  //passo pro proximo
 	}
-	return (mango_loko * signal);
+	return (number * signal);  //retorno dos campeoes
 }
-
+//teste
 int main(void)
 {
 	char *potato = "  -863";

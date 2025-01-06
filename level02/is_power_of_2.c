@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   is_power_of_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:11:19 by gcesar-n          #+#    #+#             */
-/*   Updated: 2024/12/17 13:04:17 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/06 14:38:41 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 int	is_power_of_2(unsigned int n)
 {
 	int	mango_loko;
-	int	potato;
+	int	temp;
 
-	while (mango_loko < n)
+	while (mango_loko < n)  //enquanto n atingir o numero
 	{
-		potato = n * 2;
-		if (potato == n)
-			return (1);
+		temp = n * 2;
+		if (temp == n)
+			return (1);  //retorno dos campeoes
 	}
-	return (0);
+	return (0);  //retorno dos campeoes
 }
-
+//teste
 int	main(void)
 {
 	int	number = 4;

@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 15:52:06 by gabriel           #+#    #+#             */
-/*   Updated: 2024/12/15 16:15:59 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/06 14:03:37 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_strcmp(char *s1, char *s2)
 	int	index;
 
 	index = 0;
-	while (s1[index] != '\0' || s2[index] != '\0')
+	while (s1[index] != '\0' || s2[index] != '\0')  //LEMBRAR q é || e não &&
 	{
 		if (s1[index] != s2[index])
 			return (s1[index] - s2[index]);
@@ -26,7 +26,7 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
-
+//teste
 int	main(void)
 {
 	char *potato = "aaa";

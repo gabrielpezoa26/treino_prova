@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 20:12:28 by gabriel           #+#    #+#             */
-/*   Updated: 2024/12/17 20:24:49 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/06 14:34:10 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,23 @@ char	*ft_strrev(char *str)
 	char temp;
 
 	len = 0;
-	while (str[len] != '\0')
+	while (str[len] != '\0')  // conta o tamanho
 	{
 		len++;
 	}
-	end = len - 1;
+	end = len - 1;  //tira o terminador nulo
 	start = 0;
-	while (start < end)
+	while (start < end)  //de traz pra frente
 	{
-		temp = str[start];
-		str[start] = str[end];
-		str[end] = temp;
-		start++;
-		end--;
+		temp = str[start];  //       guarda no temp
+		str[start] = str[end];  //   substitui oq ta no 'start' pelo q ta no 'end'
+		str[end] = temp;  //        poe o temp no 'end'
+		start++;  //               avança o start pra direita
+		end--;  //               avança o end pra esquerda
 	}
-	return (str);
+	return (str);  //retorno dos campeoes
 }
-
+//teste
 int	main()
 {
 	char kopf[] = "abcdefghijkl";

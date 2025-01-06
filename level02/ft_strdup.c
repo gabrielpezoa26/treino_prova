@@ -6,13 +6,11 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 16:06:11 by gabriel           #+#    #+#             */
-/*   Updated: 2024/12/15 16:19:40 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/06 14:08:28 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 
 int	ft_strlen(char *string)
 {
@@ -31,21 +29,21 @@ char	*ft_strdup(char *src)
 	int		index;
 	char	*result;
 
-	result = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
-	if (result == NULL || src == NULL)
+	result = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));  //aloca a memoria necessaria
+	if (result == NULL || src == NULL)  //tratativa de erro
 	{
 		return (NULL);
 	}
 	index = 0;
-	while (src[index] != '\0')
+	while (src[index] != '\0')  //itera e duplica a string de fato
 	{
 		result[index] = src[index];
 		index++;
 	}
-	result[index] = '\0';
+	result[index] = '\0';  //adiciona o terminador
 	return (result);
 }
-
+//teste
 int	main(void)
 {
 	char *mango_loko = "hellooo";

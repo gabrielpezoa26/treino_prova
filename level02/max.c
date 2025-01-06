@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 19:33:43 by gabriel           #+#    #+#             */
-/*   Updated: 2024/12/17 19:53:26 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/06 14:39:58 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	max(int *tab, unsigned int len)
 	}
 	return (temp);
 }
-
+//teste
 int	main(void)
 {
 	int potato[] = {12, 2, 35, 42, 58};
@@ -53,3 +53,20 @@ The function returns the largest number found in the array.
 
 If the array is empty, the function returns 0.
 */
+
+/*int max(int *tab, unsigned int len)
+{
+	int result;
+	unsigned int i = 0;
+	
+	if (len == 0)
+		return (0);
+	result = tab[i];
+	while(i < len)
+	{
+		if (result <  tab[i])
+			result = tab[i];
+		i++;
+	}
+	return result;
+}*/
