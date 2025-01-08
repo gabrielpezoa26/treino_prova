@@ -6,11 +6,9 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 14:06:34 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/08 14:24:34 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/08 14:25:44 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 char *ft_strpbrk(const char *s1, const char *s2)
 {
