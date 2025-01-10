@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   range.c                                            :+:      :+:    :+:   */
+/*   rrange.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/10 13:11:58 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/10 14:22:26 by gcesar-n         ###   ########.fr       */
+/*   Created: 2025/01/10 14:04:17 by gcesar-n          #+#    #+#             */
+/*   Updated: 2025/01/10 15:25:37 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int	*ft_range(int start, int end)
+int	*ft_rrange(int start, int end)
 {
-	int	*mango_loko;  //o resultado
+	int	*mango_loko;
 	int	i;
+	int	size;
+	int	signal;
 
-	if (start < end)  //validaçao q nao ta funfando
+	size = end - start;
+	if (size < 0)
+		size *= -1;
+	size++;
+	if (mango_loko != NULL)
 	{
-		mango_loko = (int *) malloc((end - start + 1) * sizeof(int));  // "+1" pra incluir o ultimo
-		if (mango_loko == NULL)  //valicaçao malloc
-			return (NULL);
-		i = 0;
-		while ((start + i) <= end)
+		if (start < end)
+			signal = -1;
+		while (i < size)
 		{
-			mango_loko[i] = start + i;  //so aceita
-			i++;  //avanca pro proximo
+			mango_loko[i] = end;
+			end = end + signal;
+			i++;
 		}
-		return (mango_loko);
 	}
-	return (NULL);
+	return (mango_loko);
 }
 
 int	main(void)
@@ -42,11 +46,11 @@ int	main(void)
 	int	*kartoffel;
 
 	start = 1;
-	end = 10;
+	end = 3;
 	j = 0;
 	if (start == end)
 		return (1);
-	kartoffel = ft_range(start, end);
+	kartoffel = ft_rrange(start, end);
 	while (j != (end - start + 1))
 	{
 		printf("%d\n", kartoffel[j]);
@@ -55,22 +59,22 @@ int	main(void)
 	free(kartoffel);
 	return (0);
 }
-/*Assignment name  : ft_range
-Expected files   : ft_range.c
+/*Assignment name  : ft_rrange
+Expected files   : ft_rrange.c
 Allowed functions: malloc
 --------------------------------------------------------------------------------
 
 Write the following function:
 
-int     *ft_range(int start, int end);
+int     *ft_rrange(int start, int end);
 
 It must allocate (with malloc()) an array of integers, fill it with consecutive
-values that begin at start and end at end (Including start and end !), then
+values that begin at end and end at start (Including start and end !), then
 return a pointer to the first value of the array.
 
 Examples:
 
-- With (1, 3) you will return an array containing 1, 2 and 3.
-- With (-1, 2) you will return an array containing -1, 0, 1 and 2.
+- With (1, 3) you will return an array containing 3, 2 and 1
+- With (-1, 2) you will return an array containing 2, 1, 0 and -1.
 - With (0, 0) you will return an array containing 0.
-- With (0, -3) you will return an array containing 0, -1, -2 and -3.*/
+- With (0, -3) you will return an array containing -3, -2, -1 and 0.*/
