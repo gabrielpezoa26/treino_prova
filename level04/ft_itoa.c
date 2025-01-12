@@ -6,14 +6,14 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:51:17 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/11 17:55:52 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 14:49:40 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int mango_loko(int nbr)
+int convert_to_str(int nbr)
 {
 	int i;
 
@@ -28,7 +28,7 @@ int mango_loko(int nbr)
 	return (i);
 }
 
-int ft_abs(int nbr)
+int get_absolute(int nbr)
 {
 	if (nbr < 0)
 		return (-nbr);
@@ -40,7 +40,7 @@ char *ft_itoa(int nbr)
 	int len;
 	int i;
 
-	len = mango_loko(nbr);
+	len = convert_to_str(nbr);
 	i = 0;
 	if (nbr < 0)
 		i++;
@@ -52,17 +52,13 @@ char *ft_itoa(int nbr)
 	cnum[len] = '\0';
 	while ((len - 1) >= i)
 	{
-		cnum[len - 1] = ft_abs(nbr % 10) + '0';
+		cnum[len - 1] = get_absolute(nbr % 10) + '0';
 		nbr /= 10;
 		len--;
 	}
 	return (cnum);
 }
 
-int	main(void)
-{
-	
-}
 /*Assignment name  : ft_itoa
 Expected files   : ft_itoa.c
 Allowed functions: malloc

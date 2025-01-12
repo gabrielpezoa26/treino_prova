@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 13:13:36 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 13:22:10 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 15:29:10 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,23 @@ int	main(int argc, char **argv)
 	if (argc == 2)  //validacao
 	{
 		i = 1;  //tem q comecar em 1 pra entrar no while
-		number = atoi(argv[1]);
-		if (number == 1)
+		number = atoi(argv[1]);  //converte o input pra int
+		if (number == 1)  //unica forma "calcular/"
 			printf("1");
-		while (number >= ++i)
+		while (number >= ++i)  //compara 'number' com o 'i' já incrementado, pq sim
 		{
-			if (number % i == 0)
+			if (number % i == 0)  //verifica se 'i' é um divisor de 'number', ou seja, se é um fator
 			{
-				printf("%d", i);
-				if (number == i)
+				printf("%d", i);  //printa o 'i' atual
+				if (number == i)  //para o loop pq chegou no último fator
 					break ;
-				printf("*");
-				number /= i;
-				i = 1;
+				printf("*");  //printa o *
+				number /= i;  //passa pro proximo fator
+				i = 1;  //reseta o i pra 1, pra voltar pro while
 			}
 		}
 	}
-	printf("\n");
+	printf("\n");  //n esquecer da quebra de linha
 	return (0);
 }
 

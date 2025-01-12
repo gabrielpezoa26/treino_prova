@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 16:06:11 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/06 14:08:28 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:16:57 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,23 @@ int	ft_strlen(char *string)
 
 char	*ft_strdup(char *src)
 {
-	int		index;
+	int		i;
 	char	*result;
 
 	result = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));  //aloca a memoria necessaria
 	if (result == NULL || src == NULL)  //tratativa de erro
-	{
 		return (NULL);
-	}
-	index = 0;
-	while (src[index] != '\0')  //itera e duplica a string de fato
+	i = 0;
+	while (src[i] != '\0')  //itera e duplica a string de fato
 	{
-		result[index] = src[index];
-		index++;
+		result[i] = src[i];
+		i++;
 	}
-	result[index] = '\0';  //adiciona o terminador
+	result[i] = '\0';  //adiciona o terminador no final da string
 	return (result);
 }
+
+//result = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
 //teste
 int	main(void)
 {

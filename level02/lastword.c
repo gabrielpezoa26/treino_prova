@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 15:43:56 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/06 15:57:37 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:24:27 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ void	last_word(char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i] == ' ' && str[i + 1] >= 33 && str[i + 1] <= 126)  //verifica se eh imprimivel
-		{
-			j = i + 1;
-		}
+			j = i + 1;  //vai pro primeiro char da prox palavra
 		i++;
 	}
 	while (str[j] >= 33 && str[j] <= 127)
@@ -36,7 +34,7 @@ void	last_word(char *str)
 
 int		main(int argc, char **argv)
 {
-	if (argc == 2)
+	if (argc == 2)  //verificaçao do argc
 		last_word(argv[1]);
 	write(1, "\n", 1);
 	return (0);

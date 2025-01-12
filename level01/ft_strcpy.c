@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 15:48:08 by gabriel           #+#    #+#             */
-/*   Updated: 2024/12/09 16:43:55 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 15:58:38 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ char	*ft_strcpy(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL || s2 == NULL)  //n esquecer disso
 		return (NULL);
-	while (s2[i] != '\0')
+	while (s2[i] != '\0')  //vai copiar enquanto n chegar no fim de s2
 	{
 		s1[i] = s2[i];
 		i++;
 	}
-	s1[i] = '\0';
+	s1[i] = '\0';  //nem disso
 	return (s1);
 }
 

@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 18:41:29 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/08 18:52:04 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:52:07 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main(int argc, char **argv)
 		while (i < argc)  //p percorrer todos os args
 		{
 			rstr_capitalizer(argv[i]);  //chama a func
-			write(1, "\n", 1);
+			write(1, "\n", 1);  //quebra de linha
 			i++;
 		}
 	}

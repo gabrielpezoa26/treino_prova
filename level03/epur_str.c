@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 15:51:21 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/08 16:31:57 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:38:15 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,29 @@
 int	main(int argc, char **argv)
 {
 	int i;
-	int mango_loko;  //tipo um 'id' p ver se precisa do espaço
+	int flag;  //tipo um 'id' p ver se precisa do espaço
 	
 	if (argc == 2)
 	{
 		i = 0;
-		mango_loko = 0;
+		flag = 0;
 		while (argv[1][i] == ' ' || argv[1][i] == '\t')  //so anda pelos tab e espaço
 			i++;
-		while (argv[1][i] != '\0')  //itera pelo 
+		while (argv[1][i] != '\0')  //itera pelo argv[1]
 		{
 			if (argv[1][i] == ' ' || argv[1][i] == '\t')
-				mango_loko = 1;
+				flag = 1;                                        //marca se tem espaços ou tab
 			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))  // se o char atual n for espaço (chegou na frase)
 			{
-				if (mango_loko != 0)  //se precisar do espaço, printa espaço
+				if (flag != 0)              //se precisar do espaço, printa espaço
 					write(1, " ", 1);
-				mango_loko = 0;       // reseta o 'id'
+				flag = 0;                  // reseta a flag
 				write(1, &argv[1][i], 1);  //printa o char atual
 			}
-			i++;
+			i++;  //passa pro proximo
 		}
 	}
-	write(1, "\n", 1);
+	write(1, "\n", 1);  // n esquecer quebra de linha
 }
 
 /*Assignment name  : epur_str

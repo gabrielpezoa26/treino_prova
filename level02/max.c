@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 19:33:43 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/06 14:39:58 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:27:22 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,26 @@
 int	max(int *tab, unsigned int len)
 {
 	unsigned int	index;
-	unsigned		temp;
+	unsigned		potato;
 
-	if (!tab || len == 0)
+	if (!tab || len == 0)  //tratativa de erro
 		return (0);
-	temp = tab[0];
+	potato = tab[0];
 	index = 1;
-	while (index < len)
+	while (index < len)  //p percorrer todo o array
 	{
-		if (tab[index] > temp)
-			temp = tab[index];
+		if (tab[index] > potato)  //se for maior, faz a troca
+			potato = tab[index];
 		index++;
 	}
-	return (temp);
+	return (potato);
 }
 //teste
 int	main(void)
 {
-	int potato[] = {12, 2, 35, 42, 58};
+	int beans[] = {12, 2, 35, 42, 58};
 
-	printf("%d\n", max(potato, 5));
+	printf("%d\n", max(beans, 5));
 }
 /*
 Assignment name  : max

@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:33:08 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/11 17:48:54 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:40:10 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ int main(int argc, char **argv)
 
 	i = 0;
 	j = 0;
-	if (argc == 3)  //valicacao
+	if (argc == 3)  //valicacao do argc
 	{
-		while (argv[2][j] && argv[1][i])
+		while (argv[2][j] && argv[1][i])  //enquanto n for nulo
 		{
 			if (argv[2][j] == argv[1][i])
-				i++;  //se o char for igual, avança pro proximo dentro do argv[1]
-			j++;  //se n for igual passa pro proximo char do argv[2]
+				i++;               //se o char for igual, avança pro proximo dentro do argv[1]
+			j++;                   //se n for igual passa pro proximo char do argv[2]
 		}
 		if (argv[1][i] == '\0')
 			write(1, "1", 1);

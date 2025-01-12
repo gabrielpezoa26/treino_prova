@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 16:22:39 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/06 14:04:05 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:14:21 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')  //verifica se é um digito unico
 	{
 		number = number * 10 + (str[i] - '0');  //transforma de fato LEMBRAR DAS ASPAS
-		i++;  //passo pro proximo
+		i++;  //passa pro proximo
 	}
 	return (number * signal);  //retorno dos campeoes
 }

@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 20:30:42 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/06 13:58:31 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:12:04 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	int i;
 
 	i = 0;
-	if (argc == 2)
+	if (argc == 2)  //validaçao do argc
 	{
 		while(argv[1][i])  // enqt a posic do argv for diferente de nulo
 		{
@@ -35,7 +35,9 @@ int main(int argc, char **argv)
 	}
 	write (1,"\n",1);  //quebra d linha N ESQUECER GABRIEL
 	return (0);
-}		
+}
+
+//				argv[1][i] = ('a' + 'z') - argv[1][i];
 /*
 Assignment name  : alpha_mirror
 Expected files   : alpha_mirror.c

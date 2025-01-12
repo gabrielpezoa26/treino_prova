@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:04:17 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/11 17:26:42 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:49:36 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,28 @@
 
 int	*ft_rrange(int start, int end)
 {
-	int	*result;
-	int	i;
-	int	range_length;
-	int	step;
+	int *range;
+	int i = 0;
+	int step = 1;
+	int n = end - start;
 
-	range_length = end - start;
-	if (range_length < 0)
-		range_length *= -1;
-	range_length++;
-	if (result != NULL)
+	if (n < 0)
+		(n *= -1);
+	n++;
+
+	range = (int *)malloc(sizeof(int) * n);
+	if (range)
 	{
 		if (start < end)
 			step = -1;
-		while (i < range_length)
+		while (i < n)
 		{
-			result[i] = end;
+			range[i] = end;
 			end = end + step;
 			i++;
 		}
 	}
-	return (result);
+	return (range);
 }
 
 int	main(void)
