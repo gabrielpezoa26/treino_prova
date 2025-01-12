@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rrange.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:04:17 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/10 15:25:37 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/11 17:26:42 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,27 @@
 
 int	*ft_rrange(int start, int end)
 {
-	int	*mango_loko;
+	int	*result;
 	int	i;
-	int	size;
-	int	signal;
+	int	range_length;
+	int	step;
 
-	size = end - start;
-	if (size < 0)
-		size *= -1;
-	size++;
-	if (mango_loko != NULL)
+	range_length = end - start;
+	if (range_length < 0)
+		range_length *= -1;
+	range_length++;
+	if (result != NULL)
 	{
 		if (start < end)
-			signal = -1;
-		while (i < size)
+			step = -1;
+		while (i < range_length)
 		{
-			mango_loko[i] = end;
-			end = end + signal;
+			result[i] = end;
+			end = end + step;
 			i++;
 		}
 	}
-	return (mango_loko);
+	return (result);
 }
 
 int	main(void)
@@ -43,20 +43,20 @@ int	main(void)
 	int	j;
 	int	end;
 	int	start;
-	int	*kartoffel;
+	int	*potato;
 
 	start = 1;
 	end = 3;
 	j = 0;
 	if (start == end)
 		return (1);
-	kartoffel = ft_rrange(start, end);
+	potato = ft_rrange(start, end);
 	while (j != (end - start + 1))
 	{
-		printf("%d\n", kartoffel[j]);
+		printf("%d\n", potato[j]);
 		j++;
 	}
-	free(kartoffel);
+	free(potato);
 	return (0);
 }
 /*Assignment name  : ft_rrange
