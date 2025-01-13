@@ -6,14 +6,12 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 15:01:12 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/13 15:00:03 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/13 17:21:54 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
-
-#include <unistd.h>
 
 int main(int argc, char **argv)
 {
@@ -23,23 +21,27 @@ int main(int argc, char **argv)
 	int i = 0;
 
 	i = 0;
-	if (argc == 2) // valicaçao
+	if (argc == 2) // valicaçao argc
 	{
 		while(argv[1][i] != '\0')  //percorre o argv[1] inteiro, p começar de tras p frente
 			i++;
 		while(i >= 0)  //começa a iterar, de tras p frente
 		{
-			while( argv[1][i] == '\0' || argv[1][i] == ' ' || argv[1][i] == '\t')
+			while( argv[1][i] == '\0' || argv[1][i] == ' ' || argv[1][i] == '\t')  //tira o espaço em branco depois da string
+			{
 				i--;  //tira o espaço em branco depois da string
+			}
 			end = i;  //marca o ultimo char 
 			while(argv[1][i] && argv[1][i] != ' ' && argv[1][i] != '\t')  //percorre a palavra ate o primeiro char
+			{
 				i--;
+			}
 			start = i + 1;  //marca o primeiro char da palavra atual
 			flag = start;
 			while(start <= end)  //printa os bagui
 			{
 				write (1, &argv[1][start],1);
-				start++;		
+				start++;
 			}
 			if (flag != 0)  //adiciona um espaço se precisar
 				write(1, " ", 1);

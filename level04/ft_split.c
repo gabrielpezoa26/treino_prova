@@ -6,41 +6,47 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:56:39 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/13 14:59:20 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/13 18:21:04 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-	#include <stdlib.h>
-	#include <stdio.h>
-	#define WD_LEN 1000
+#include <stdlib.h>
+#include <stdio.h>
+#define WD_LEN 1000
 
 char	**ft_split(char *str)
 {
-	char **array;
-	int i = 0;
-	int j = 0;
-	int k;
+	char **result;
+	int i;  //percorre a string str
+	int j;  //guarda a posiçao no char **array
+	int k;  //guarda a posicao de cada palavra
 
-	array = malloc(WD_LEN);
-	while (str[i] != '\0')
+	i = 0;
+	j = 0;
+	result = malloc(WD_LEN);
+	while (str[i] != '\0')  //percorre ate o final
 	{
-		if (str[i] > 32)
+		if (str[i] > 32)  //pula espaços tabs etc p percorrer as palavras
 		{
-			k = 0;
-			array[j] = malloc(WD_LEN);
+			k = 0;  //zera o 'k' pra começar a processar outra palavra
+			result[j] = malloc(WD_LEN);  //aloca memoria pra palavra no [j]
 			while (str[i] > 32)
 			{
-				array[j][k++] = str[i++];
+				result[j][k] = str[i];  //copia o char de str[i] pro array
+				j++;
+				i++;
 			}
-			array[j++][k] = '\0';
+		result[j][k] = '\0';  //adiciona o terminador
+		j++;
 		}
 		else
-			i++;
+		{
+			i++;  //só itera
+		}
 	}
-	array[j] = NULL;
-	return (array);
+	result[j] = NULL;  //tipo um \0 pra array
+	return (result);
 }
-
 
 
 //teste

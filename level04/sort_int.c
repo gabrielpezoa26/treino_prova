@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:49:41 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/13 15:00:10 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/13 17:27:34 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void sort_int_tab(int *tab, unsigned int size)
 	int	temp;
 
 	i = 0;
-	while (i < (size - 1))
+	while (i < (size - 1))  // ' - 1' por causa do nulo
 	{
 		if (tab[i] > tab[i + 1])  //se o numero atual for maior, tem q trocar
 		{
@@ -30,10 +30,6 @@ void sort_int_tab(int *tab, unsigned int size)
 	}
 }
 
-int main(void)
-{
-	
-}
 /*Assignment name  : sort_int_tab
 Expected files   : sort_int_tab.c
 Allowed functions:

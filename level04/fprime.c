@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fprime.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 13:13:36 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 15:29:10 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/13 18:33:00 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ int	main(int argc, char **argv)
 	int	i;
 	int	number;
 
-	if (argc == 2)  //validacao
+	if (argc == 2)  //validacao argc
 	{
 		i = 1;  //tem q comecar em 1 pra entrar no while
 		number = atoi(argv[1]);  //converte o input pra int
-		if (number == 1)  //unica forma "calcular/"
+		if (number == 1)  //resultado de 1 é 1
 			printf("1");
 		while (number >= ++i)  //compara 'number' com o 'i' já incrementado, pq sim
 		{
