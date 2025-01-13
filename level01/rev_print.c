@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rev_print.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 18:29:24 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 16:08:20 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/13 14:34:55 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,11 @@ char *rev_print(char *str)
 	write(1, "\n", 1);
 	return (str);
 }
+
+
+
+
+
 
 //teste
 int main(void)

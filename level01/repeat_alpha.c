@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   repeat_alpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:39:03 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 16:00:17 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/13 14:33:47 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 			i++;
 		}
 	}
-	write(1, "\n", 1);  //n esquecer disso
+	write(1, "\n", 1);  //n esquecer
 	return (0);
 }
 

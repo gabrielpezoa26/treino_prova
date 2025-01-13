@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rrange.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:04:17 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/12 16:49:36 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/13 14:47:14 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ int	*ft_rrange(int start, int end)
 	return (range);
 }
 
+
+//teste
 int	main(void)
 {
 	int	j;
@@ -54,7 +56,7 @@ int	main(void)
 	potato = ft_rrange(start, end);
 	while (j != (end - start + 1))
 	{
-		printf("%d\n", potato[j]);
+		printf("%d \n", potato[j]);
 		j++;
 	}
 	free(potato);

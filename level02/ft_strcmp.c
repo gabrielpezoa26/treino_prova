@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 15:52:06 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 16:14:50 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/13 14:40:12 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,18 @@ Reproduce the behavior of the function strcmp (man strcmp).
 Your function must be declared as follows:
 
 int    ft_strcmp(char *s1, char *s2);
+
+SYNOPSIS
+       #include <string.h>
+
+       char *strpbrk(const char *s, const char *accept);
+
+DESCRIPTION
+       The  strpbrk() function locates the first occurrence in the string s of
+       any of the bytes in the string accept.
+
+RETURN VALUE
+       The strpbrk() function returns a pointer to the byte in s that  matches
+       one of the bytes in accept, or NULL if no such byte is found.
+
 */
