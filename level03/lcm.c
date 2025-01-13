@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lcm.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 10:44:47 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/09 11:04:47 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/12 16:41:33 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,20 @@
 
 unsigned int	lcm(unsigned int a, unsigned int b)
 {
-	if (a == 0 || b == 0)
+	unsigned int n;
+
+	if (a == 0 || b == 0)  //tratativa de erro
 		return (0);
-	
-	
-	//LCM(x, y) = | x * y | / HCF(x, y)
+	if (a > b)
+		n = a;
+	else
+		n = b;
+	while (1)
+	{
+		if (n % a == 0 && n % b == 0)
+			return (n);
+		++n;
+	}
 }
 
 /*Assignment name  : lcm

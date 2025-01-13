@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 10:27:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/05 18:16:34 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 15:50:52 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	int i;
 
 	i = 0;
-	if (argc == 2)
+	if (argc == 2)  //validaçao do argc
 	{
 		while (argv[1][i] == 32 || argv[1][i] == 9)  //anda pelos espaços e tab
 		{

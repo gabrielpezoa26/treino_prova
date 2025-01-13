@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 10:19:18 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/05 18:12:06 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:09:38 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,23 @@ int main(int argc, char **argv)
 {
 	int	i = 0;
 
-	if (argc == 2)
+	if (argc == 2)  //validação do argc
 	{
 		while (argv[1][i] != '\0')
 		{
-			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')  //lowercase
 			{
 				argv[1][i] -= 32;
 			}
-			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
+			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')  //uppercase
 			{
 				argv[1][i] += 32;
 			}
-			write(1, &argv[1][i], 1);
-			i++;	
+			write(1, &argv[1][i], 1);  //printa a letra já convertida
+			i++; //avança pro proximo char
 		}
 	}
-	write(1, "\n", 1);
+	write(1, "\n", 1);  // n esquecer da quebra de linha
 }
 
 /*

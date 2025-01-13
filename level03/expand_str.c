@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:11:47 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/08 16:31:33 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:39:30 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,29 @@
 int	main(int argc, char **argv)
 {
 	int i;
-	int potato;
+	int flag;  //determina se precisa do espaço ou não
 
-	if (argc == 2)
+	if (argc == 2)  //verificação do argc
 	{
 		i = 0;
-		potato = 0;
-		while (argv[1][i] == ' ' || argv[1][i] == '\t')
-		{
+		flag = 0;
+		while (argv[1][i] == ' ' || argv[1][i] == '\t')  //só percorre espaço/tabss antes do argv[1]
 			i++;
-		}
-		while (argv[1][i] != '\0')
+		while (argv[1][i] != '\0')  //percorre argv[1] inteiro
 		{
-			if (argv[1][i] == ' ' || argv[1][i] == '\t')
-				potato = 1;
-			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))
+			if (argv[1][i] == ' ' || argv[1][i] == '\t')  //marca se precisa de espaço ou nao
+				flag = 1;
+			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))  //se o char n for espaço é pq chegou na "frase"
 			{
-				if (potato != 0)
+				if (flag != 0)  //poe os 3 espaços se necessário
 					write(1, "   ", 1);
-				potato = 0;
-				write(1, &argv[1][i], 1);
+				flag = 0;    //reseta a flag
+				write(1, &argv[1][i], 1);  //printa o char atual
 			}
 			i++;
 		}
 	}
-	write(1, '\n', 1);
+	write(1, '\n', 1);  //n esquecer da quebra de linha
 }
 
 /*Assignment name  : expand_str

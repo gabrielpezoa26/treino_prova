@@ -3,20 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   print_hex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 15:54:57 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/10 13:11:48 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/12 16:45:34 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_atoi(char *str)
+int	ft_atoi(char *str)  //atoi simplificado
 {
-	int n = 0;
+	int n;
 
-	while (*str != '\0')
+	n = 0;
+	while (*str != '\0')  //percorre str todo
 	{
 		n = n * 10;
 		n = n + *str - '0';
@@ -25,19 +26,19 @@ int	ft_atoi(char *str)
 	return (n);
 }
 
-void	print_hex(int n)
+void	ft_printhex(int n)
 {
-	char hex_digits[] = "0123456789abcdef";
+	char *hex_digits = "0123456789abcdef";
 
 	if (n >= 16)
-		print_hex(n / 16);
+		ft_printhex(n / 16);
 	write(1, &hex_digits[n % 16], 1);
 }
 
 int	main(int argc, char **argv)
 {
 	if (argc == 2)
-		print_hex(ft_atoi(argv[1]));
+		ft_printhex(ft_atoi(argv[1]));
 	write(1, "\n", 1);
 }
 

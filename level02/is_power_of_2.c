@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:11:19 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/09 10:21:12 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/13 10:55:04 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,12 @@
 
 int	is_power_of_2(unsigned int n)
 {
-	int	mango_loko;
-	int	temp;
-
-	while (mango_loko < n)  //enquanto n atingir o numero
-	{
-		temp = n * 2;
-		if (temp == n)
-			return (1);  //retorno dos campeoes
-	}
-	return (0);  //retorno dos campeoes
+	if (n == 0)
+		return 0;
+	return (n & (n - 1)) == 0;  //só aceita gabriel
 }
+
+//	return (n & (n - 1)) == 0;
 //teste
 int	main(void)
 {

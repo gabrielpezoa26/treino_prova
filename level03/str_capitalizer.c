@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:42:33 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/08 18:41:14 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 17:49:36 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	str_capitalizer(char *str)
 	if (str[i] >= 'a' && 'z' >= str[i])  //converte pra maiusculo
 		str[i] -= 32;
 	write(1, &str[i], 1);  //printa o char atual
-	while (str[++i] != '\0')
+	while (str[++i] != '\0')  //compara 'i' já incrementado com '\0'
 	{
 		if (str[i] >= 'A' && 'Z' >= str[i])  //verifica se é letra, e maiusculo
 			str[i] += 32;   //converte pra minusculo

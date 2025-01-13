@@ -6,28 +6,29 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:06:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/05 18:21:08 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 15:55:16 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	mango_loko(int number)  //p conseguir imprimir numero, recursivo
+void	ft_putnbr(int number)
 {
 	char	str[10] = "0123456789";
 
 	if (number > 9)
-		mango_loko(number / 10);
+		ft_putnbr(number / 10);  //recursivo
 	write (1, &str[number % 10], 1);
 }
 
 int		main()
 {
-	int i = 1;
+	int i;
 
+	i = 1;
 	while (i <= 100)
 	{
-		if (i % 15 == 0)
+		if (i % 15 == 0)  //se for divisivel por 3 E 5
 		{
 			write (1, "fizzbuzz", 8);
 		}
@@ -40,7 +41,7 @@ int		main()
 			write (1, "buzz", 4);
 		}
 		else
-			mango_loko(i);
+			ft_putnbr(i);  //simplesmente printa o numero
 		i++;
 		write (1, "\n", 1);
 	}

@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 20:12:28 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/06 14:34:10 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:18:02 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strrev(char *str)
 	}
 	end = len - 1;  //tira o terminador nulo
 	start = 0;
-	while (start < end)  //de traz pra frente
+	while (start < end)  //vai de traz pra frente
 	{
 		temp = str[start];  //       guarda no temp
 		str[start] = str[end];  //   substitui oq ta no 'start' pelo q ta no 'end'
@@ -40,7 +40,6 @@ char	*ft_strrev(char *str)
 int	main()
 {
 	char kopf[] = "abcdefghijkl";
-
 	printf("%s", ft_strrev(kopf));
 }
 /*

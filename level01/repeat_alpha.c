@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:39:03 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/05 18:25:05 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:00:17 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 			{
 				count = argv[1][i] - 'a' + 1;
 			}
-			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')  ////validaçao de caso seja letra 
+			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')  //validaçao de caso seja letra 
 			{
 				count = argv[1][i] - 'A' + 1;
 			}
@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 			i++;
 		}
 	}
-	write(1, "\n", 1);
+	write(1, "\n", 1);  //n esquecer disso
 	return (0);
 }
 

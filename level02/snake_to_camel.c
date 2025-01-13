@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 13:34:01 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/08 14:02:11 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/12 16:30:39 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ int main(int argc, char **argv)
 	int i;
 
 	i = 0;
-	if (argc == 2)
+	if (argc == 2)  //verificação do argc
 	{
 		while(argv[1][i] != '\0')  //percorre a string ate o final
 		{
-			if (argv[1][i] == '_')
+			if (argv[1][i] == '_')  //se o char atual for '_', converte o char seguinte pra uppercase
 			{
 				i++;
 				argv[1][i] = argv[1][i] - 32;
 			}
-			write (1, &argv[1][i], 1);
+			write (1, &argv[1][i], 1);  //printa o char, convertido ou não
 			i++;
 		}
 	}
