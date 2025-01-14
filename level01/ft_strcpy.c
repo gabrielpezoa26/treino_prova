@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 15:48:08 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 15:58:38 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/14 13:17:32 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strcpy(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	if (s1 == NULL || s2 == NULL)  //n esquecer disso
+	if (s1 == NULL || s2 == NULL)  //tratativa de erro
 		return (NULL);
 	while (s2[i] != '\0')  //vai copiar enquanto n chegar no fim de s2
 	{

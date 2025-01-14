@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:39:03 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/13 14:33:47 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/14 13:21:39 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,27 @@
 int main(int argc, char **argv)
 {
 	int	i;
-	int	count;
+	int	repeat_count;
 
-	if (argc == 2)
+	if (argc == 2)  //validaçao do argc
 	{
 		i = 0;
-		while (argv[1][i] != '\0')  //p percorrer ate o final
+		while (argv[1][i] != '\0')  //percorre ate o final
 		{
-			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')  //validaçao de caso seja letra 
+			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')  //validaçao letra 
 			{
-				count = argv[1][i] - 'a' + 1;
+				repeat_count = argv[1][i] - 'a' + 1;
 			}
-			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')  //validaçao de caso seja letra 
+			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')  //validaçao letra 
 			{
-				count = argv[1][i] - 'A' + 1;
+				repeat_count = argv[1][i] - 'A' + 1;
 			}
 			else
-				count = 1;
-			while (count > 0)
+				repeat_count = 1;
+			while (repeat_count > 0)
 			{
 				write(1, &argv[1][i], 1);
-				count--;
+				repeat_count--;
 			}
 			i++;
 		}
