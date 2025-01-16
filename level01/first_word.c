@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 10:27:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/14 13:14:39 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:25:37 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,16 @@ int main(int argc, char **argv)
 	if (argc == 2)  //validaçao do argc
 	{
 		while (argv[1][i] == 32 || argv[1][i] == 9)  //anda pelos espaços e tab
-		{
 			i++;
-		}
 		while (argv[1][i] && (argv[1][i] != 32 && argv[1][i] != 9))  //enqt argv for diferente de \0, espaços e tabs
 		{
-			write(1, &argv[1][i], 1);  //escreve o caracter atual
+			write(1, &argv[1][i], 1);  //escreve o char atual
 			i++;
 		}
 	}
 	write(1, "\n", 1);
 }
+
 /*Write a program that takes a string and displays its first word, followed by a
 newline.
 

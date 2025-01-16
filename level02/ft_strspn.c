@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 13:48:10 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/14 16:51:23 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 15:42:55 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,35 +17,37 @@
 size_t	ft_strspn(const char *s, const char *accept)
 {
 	size_t	i;
-	size_t	j;
+	size_t	count;  //conta o tamanho
 
 	i = 0;
-	while (s[i] != '\0')
+	count = 0;
+	while (*s) //itera por tds os itens de 's'
 	{
-		j = 0;
-		while (accept[j] != '\0')
+		while (accept[i] != '\0' && *s != accept[i])
 		{
-			if (s[i] == accept[j])
-				return (i);
-			else if (s[i] != accept[j])
-				return (0);
-			j++;
+			i++;
 		}
-		i++;
+		if (accept[i] == '\0')  //pq chegou no final
+			return (count);
+		i = 0;
+		count++;
+		s++;  //avança pro proximo char de 's'
 	}
-	return (i);
+	return (count);
 }
 
+/*
+	var index e count;  dois whiles;  itera por 's' inteiro'; compara cada char;
+	'accept';  reseta o i = 0 dnv; 
+*/
+
+//teste
 int main()
 {
-	int	beans;
-	int	potato;
+	char	*array = "aaaaaaaaaaaabbb";
 
-	beans = strspn("geeks for geeks","geeks");
-	potato = ft_strspn("geeks for geeks","geeks");
-	printf ("minha func: %d\n", beans);
-	printf("func original: %d\n", potato);
-	return(0); 
+	printf("func original: %zu\n", strspn(array, "bbb"));
+	printf("minha func: %zu\n", ft_strspn(array, "bbb"));
 }
 /*
 Assignment name	: ft_strspn

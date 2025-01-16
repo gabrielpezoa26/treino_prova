@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 20:12:28 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 16:18:02 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:45:08 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ char	*ft_strrev(char *str)
 	}
 	return (str);  //retorno dos campeoes
 }
+
+/*
+	4 variaveis ; conta o tamanho e guarda; tira o nulo;  while (start < end);
+	faz as trocas (5 linhas);  retorna str
+*/
 //teste
 int	main()
 {

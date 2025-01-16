@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   max.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 19:33:43 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 16:27:22 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:31:47 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,27 @@
 int	max(int *tab, unsigned int len)
 {
 	unsigned int	index;
-	unsigned		potato;
+	unsigned		max_value;
 
 	if (!tab || len == 0)  //tratativa de erro
 		return (0);
-	potato = tab[0];
+	max_value = tab[0];
 	index = 1;
 	while (index < len)  //p percorrer todo o array
 	{
-		if (tab[index] > potato)  //se for maior, faz a troca
-			potato = tab[index];
+		if (tab[index] > max_value)  //se for maior, faz a troca
+			max_value = tab[index];
 		index++;
 	}
-	return (potato);
+	return (max_value);
 }
+
+/*
+	var index e max_value;  tratativa de erro; max começa na pos.0 e index no 1;
+	enquanto index for maior que len, verifica se atual > max, se sim, max vira o numero;
+	itera ate o final e retorna
+*/
+
 //teste
 int	main(void)
 {

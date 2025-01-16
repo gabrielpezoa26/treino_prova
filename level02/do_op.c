@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   do_op.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 13:49:36 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/08 14:02:09 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:41:14 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	if (argc == 4)  //verificacao
 	{
@@ -42,6 +42,10 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
+/*
+	primeiro parametro do printf vai ser sempre argv[1], e o segundo sempre argv[3];
+	um if pra cada operador (5 no total);  printa \n no final e retorna 0;
+*/
 /*Assignment name  : do_op
 Expected files   : *.c, *.h
 Allowed functions: atoi, printf, write

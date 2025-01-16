@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 13:37:56 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/14 16:05:47 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 15:43:45 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ size_t	ft_strcspn(const char *s, const char *reject)
 	}
 	return (i);
 }
+
+/*
+	dois iteradores;  dois whiles;  tratativa de erro;  itera por s;  percorre 'reject';
+	compara o char atual c todos de reject, dps avança o char;
+*/
 
 int main(void)
 { 

@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 18:29:24 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/14 13:28:17 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:32:27 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ char *rev_print(char *str)
 	size = ft_strlen(str) - 1;  // '-1' pra remover o '\0', se nao da merda
 	while (str[size] >= 0)  //itera de tras p frente
 	{
-		write(1, &str[size], 1);  //printa na posicao
-		size--;  //itera
+		write(1, &str[size], 1);  //printa o char atual
+		size--;
 	}
-	write(1, "\n", 1);
+	write(1, "\n", 1);  //n esquecer quera d linha
 	return (str);
 }
 
@@ -44,10 +44,6 @@ int main(void)
 {
 	rev_print("Hello world");
 	write (1, "\n", 1);
-	// rev_print("tnirp esreveR");
-	// write (1, "\n", 1);
-	// rev_print("");
-	// write (1, "\n", 1);
 }
 
 /*Assignment name  : rev_print

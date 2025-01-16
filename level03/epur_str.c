@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   epur_str.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 15:51:21 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 16:38:15 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:05:37 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 		while (argv[1][i] != '\0')  //itera pelo argv[1]
 		{
 			if (argv[1][i] == ' ' || argv[1][i] == '\t')
-				flag = 1;                                        //marca se tem espaços ou tab
+				flag = 1;                                //marca se tem espaços ou tab
 			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))  // se o char atual n for espaço (chegou na frase)
 			{
 				if (flag != 0)              //se precisar do espaço, printa espaço
@@ -39,6 +39,12 @@ int	main(int argc, char **argv)
 	}
 	write(1, "\n", 1);  // n esquecer quebra de linha
 }
+
+/*
+	um index e uma flag; anda pelos tab e espaço; itera pelo argv[1];
+	dentro do while marca se tem espaço ou tab c a flag; dps bota o espaço onde precisa;
+	quebra de linha
+*/
 
 /*Assignment name  : epur_str
 Expected files   : epur_str.c

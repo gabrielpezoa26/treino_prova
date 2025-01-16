@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:39:03 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/14 13:21:39 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:30:00 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ int main(int argc, char **argv)
 	if (argc == 2)  //validaçao do argc
 	{
 		i = 0;
-		while (argv[1][i] != '\0')  //percorre ate o final
+		while (argv[1][i])  //percorre argv[1][i] inteiro
 		{
-			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')  //validaçao letra 
+			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
 			{
 				repeat_count = argv[1][i] - 'a' + 1;
 			}
-			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')  //validaçao letra 
+			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
 			{
 				repeat_count = argv[1][i] - 'A' + 1;
 			}
@@ -43,6 +43,9 @@ int main(int argc, char **argv)
 	write(1, "\n", 1);  //n esquecer
 	return (0);
 }
+
+// if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+//    repeat_count = argv[1][i] - 'a' + 1;
 
 /*Assignment name  : repeat_alpha
 Expected files   : repeat_alpha.c

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   snake_to_camel.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 13:34:01 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 16:30:39 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:20:47 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ int main(int argc, char **argv)
 	return (0);
 }
 
+/*
+	validar o argc == 2; itera argv[1] inteiro; if == underline itera 1 e converte pra maiusculo; 
+	printa char atual; itera no while tb; printa quebra de linha
+*/
 /*Assignment name  : snake_to_camel
 Expected files   : snake_to_camel.c
 Allowed functions: malloc, free, realloc, write

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camel_to_snake.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 13:41:30 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/08 14:02:16 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:18:43 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ int main(int argc, char **argv)
 	write (1, "\n", 1);  //printa a quebra de linha independente do argc
 	return (0);
 }
+
+/*
+	validar argc; itera argv[1][i]; if (letra maiuscula) converte pra minusculo e printa um underline;
+	printa o char atual; printa quebra de linha
+*/
 
 /*Assignment name  : camel_to_snake
 Expected files   : camel_to_snake.c

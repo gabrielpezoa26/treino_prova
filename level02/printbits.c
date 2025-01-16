@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 18:35:25 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/13 14:42:50 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 15:32:16 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ void	print_bits(unsigned char octet)
 	}
 }
 
+/*
+	i = 8;
+*/
 /*
 Assignment name  : print_bits
 Expected files   : print_bits.c

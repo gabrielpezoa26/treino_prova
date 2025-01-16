@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:11:19 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/13 14:41:49 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:45:09 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 int	is_power_of_2(unsigned int n)
 {
 	if (n == 0)
-		return 0;
+		return (0);
 	return (n & (n - 1)) == 0;  //só aceita
 }
 
-//	return (n & (n - 1)) == 0;
+/*
+	3 linhas só; se 'n' for -0 retorna 0;  (n & (n - 1)) == 0
+*/
+
 //teste
 int	main(void)
 {

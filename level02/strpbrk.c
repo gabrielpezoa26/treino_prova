@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strpbrk.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 14:06:34 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 16:27:46 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:27:32 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,18 @@ char *ft_strpbrk(const char *s1, const char *s2)
 		while(s2[i] != '\0')  //percorre a s2 inteira
 		{
 			if(*s1 == s2[i])  //se for igual retorna o ponteiro
-				return (char *) s1;
+				return (char *)s1;
 			i++;                //itera pelo s2
 		}
 		s1++;       //itera pelo s1 dps q todos os char de s2 foram comparados c o atual de s1
 	}
 	return (NULL);
 }
+
+/*
+	tratativa de erro; itera s1 inteiro; inicializa o index e itera s2;
+	se os char sao iguais retorna (char *)s1; itera i++ no while de dentro e s1++ no while d fora
+*/
 
 /*Assignment name	: ft_strpbrk
 Expected files	: ft_strpbrk.c

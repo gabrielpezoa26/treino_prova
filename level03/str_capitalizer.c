@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   str_capitalizer.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:42:33 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 17:49:36 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 14:51:55 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,10 @@ int main(int argc, char **argv)
 	}
 	return (0);
 }
+
+/*
+	converte pra maiusculo; printa o char atual; compara 'i' ja incrementado com '\0' ; 
+*/
 
 /*Assignment name  : str_capitalizer
 Expected files   : str_capitalizer.c

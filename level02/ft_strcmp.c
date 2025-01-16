@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 15:52:06 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/13 14:40:12 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:40:23 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
+
+/*
+	uma variavel so, percorrer as duas || ; hora q der diferença ja retorna a propria diferença ; se nao, retorna 0
+*/
 //teste
 int	main(void)
 {

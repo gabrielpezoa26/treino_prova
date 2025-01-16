@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   alpha_mirror.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 20:30:42 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 16:12:04 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:40:20 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 			{
 				argv[1][i] = ('A' + 'Z') - argv[1][i];  //faz o "espelhamento"
 			}
-			write(1, &argv[1][i], 1);  //finalmente escreve o caracter da posicao e dps passa pro prox
+			write(1, &argv[1][i], 1);  //printa o char da posicao e dps passa pro prox
 			i++;
 		}
 	}
@@ -37,7 +37,12 @@ int main(int argc, char **argv)
 	return (0);
 }
 
-//				argv[1][i] = ('a' + 'z') - argv[1][i];
+/*
+	valida o argc;  itera pelo argv[1];  um if pra cada, printa o char fora;
+	printa quebra de linha no final
+*/
+
+
 /*
 Assignment name  : alpha_mirror
 Expected files   : alpha_mirror.c

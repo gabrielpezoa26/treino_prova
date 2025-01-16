@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expand_str.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:11:47 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 16:39:30 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:05:47 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,11 @@ int	main(int argc, char **argv)
 	write(1, '\n', 1);  //n esquecer da quebra de linha
 }
 
+/*
+	um index e uma flag; anda pelos tab e espaço; itera pelo argv[1];
+	dentro do while marca se tem espaço ou tab c a flag; dps bota o espaço onde precisa;
+	quebra de linha
+*/
 /*Assignment name  : expand_str
 Expected files   : expand_str.c
 Allowed functions: write

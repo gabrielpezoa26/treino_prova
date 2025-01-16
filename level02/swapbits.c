@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swapbits.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 18:38:01 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/02 18:38:50 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:23:29 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ unsigned char	swap_bits(unsigned char octet)
 {
 	return ((octet >> 4) | (octet << 4));
 }
+
 /*Assignment name  : swap_bits
 Expected files   : swap_bits.c
 Allowed functions:

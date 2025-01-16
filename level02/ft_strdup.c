@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 16:06:11 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 16:16:57 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 14:41:46 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,10 @@ char	*ft_strdup(char *src)
 	result[i] = '\0';  //adiciona o terminador no final da string
 	return (result);
 }
-
+/*
+	strlen, mallocar "result = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));", 
+	tratar NULL, percorrer src  e copiar; adicionar o nulo no final result[i]
+*/
 //result = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
 //teste
 int	main(void)

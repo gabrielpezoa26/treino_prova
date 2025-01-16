@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 10:19:18 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/14 13:34:29 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:32:58 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,11 @@ int main(int argc, char **argv)
 			i++;  //avança pro proximo char
 		}
 	}
-	write(1, "\n", 1);  // n esquecer da quebra de linha
+	write(1, "\n", 1);  // n esquecer
 }
+
+// if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+
 
 /*
 	Assignment name  : ulstr

@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 10:44:47 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/13 14:51:29 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 15:12:16 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ unsigned int	lcm(unsigned int a, unsigned int b)
 		++n;
 	}
 }
+
+/*
+	'n'; tratativa de erro ( a == 0); 
+*/
 
 /*Assignment name  : lcm
 Expected files   : lcm.c

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parasum.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 10:30:59 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/12 16:43:11 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 14:49:47 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,10 @@ int	main(int argc, char **argv)
 	write(1, "\n", 1);  //quebra de linha
 	return (0);
 }
+
+/*
+	usa putnbr; na main só chama ft_putnbr(argc - 1) p tirar o a.out; quebra linha
+*/
 
 /*Assignment name  : paramsum
 Expected files   : paramsum.c
