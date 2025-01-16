@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:04:17 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/13 14:47:14 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:46:16 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,12 @@ int	*ft_rrange(int start, int end)
 	return (range);
 }
 
+/*
+	4 variaveis (o result, iterador, flag, e 'n');  valida 'n';  faz o malloc;
+	
+*/
+
+
 
 //teste
 int	main(void)
@@ -62,6 +68,12 @@ int	main(void)
 	free(potato);
 	return (0);
 }
+
+
+
+
+
+
 /*Assignment name  : ft_rrange
 Expected files   : ft_rrange.c
 Allowed functions: malloc

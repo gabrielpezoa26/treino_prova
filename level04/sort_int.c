@@ -6,14 +6,14 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:49:41 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/14 13:02:12 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:05:23 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void sort_int_tab(int *tab, unsigned int size)
 {
 	unsigned int	i;
-	int	temp;
+	int				temp;
 
 	i = 0;
 	while (i < (size - 1))  // ' - 1' por causa do nulo
@@ -29,6 +29,12 @@ void sort_int_tab(int *tab, unsigned int size)
 			i++;
 	}
 }
+
+/*
+	uma var temp e um iterador(unsigned);  compara 'i' com size - 1 (nulo);
+	verifica se tem q trocar ou não; 
+*/
+
 
 /*Assignment name  : sort_int_tab
 Expected files   : sort_int_tab.c

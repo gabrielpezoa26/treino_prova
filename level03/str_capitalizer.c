@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:42:33 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 14:51:55 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:43:33 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,14 @@ int main(int argc, char **argv)
 }
 
 /*
-	converte pra maiusculo; printa o char atual; compara 'i' ja incrementado com '\0' ; 
+	na func -> converte pra maiusculo; printa o char atual; compara 'i' ja incrementado com '\0';
+
+	na main -> validacao argc;  inicializa 'i' e chama a func;  poe o \n;  itera;
+	retorna 0;
 */
+
+
+
 
 /*Assignment name  : str_capitalizer
 Expected files   : str_capitalizer.c

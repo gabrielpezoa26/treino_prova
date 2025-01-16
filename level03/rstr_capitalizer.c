@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rstr_capitalizer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 18:41:29 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 17:44:59 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 16:43:38 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,17 @@ int	main(int argc, char **argv)
 	}
 	return (0);
 }
+
+/*
+	na func -> percorre toda a string, converte pra maiusculo se precisar
+	 converte pra minusculo o resto;  printa o char atual e itera
+
+	na main -> validacao argc;  inicializa 'i' e chama a func;  poe o \n;  itera;
+	retorna 0;
+*/
+
+
+
 
 /*Assignment name  : rstr_capitalizer
 Expected files   : rstr_capitalizer.c

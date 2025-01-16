@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_hex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 15:54:57 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/12 16:45:34 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 16:42:54 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,17 @@ int	main(int argc, char **argv)
 		ft_printhex(ft_atoi(argv[1]));
 	write(1, "\n", 1);
 }
+
+/*
+	atoi simplificado;
+
+	na func -> declara o array de dígitos;  converte pra hexa;  
+
+	na main -> valida o argc;  chama a printhex;  printa o \n
+*/
+
+
+
 
 /*Assignment name  : print_hex
 Expected files   : print_hex.c

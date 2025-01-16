@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 12:56:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/14 13:11:15 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:22:05 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 
 void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 {
-	if (begin_list == NULL || *begin_list == NULL)  //tratativa de erro
-		return ;
-
 	t_list *current_node;  //guarda o nodo atual
 	
+	if (begin_list == NULL || *begin_list == NULL)  //tratativa de erro
+		return ;
 	current_node = *begin_list;  //aponta pro começo da lista
 	if (cmp(current_node->data, data_ref) == 0)  // compara 'current_node' com 'data_ref'  se der "match"
 	{
@@ -27,12 +26,19 @@ void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 		free(current_node);  //remove o nodo
 		ft_list_remove_if(begin_list, data_ref, cmp);  //recursivo
 	}
-	else  // se de "match"      tem q ter o else p moulinette !!!
+	else  // se der "match"      tem q ter o else p moulinette !!!
 	{
 		current_node = *begin_list;
 		ft_list_remove_if(&current_node->next, data_ref, cmp);  //só avança pro próx. nodo
 	}
 }
+
+
+/*
+	tratativa de erro;  declara 't_list';  aponta pro começo da lista;
+	um if e um else;  no if, compara o atual com 'data';  remove o nodo;
+	no else, só avança pro proximo nodo
+*/
 
 /*Assignment name  : ft_list_remove_if
 Expected files   : ft_list_remove_if.c

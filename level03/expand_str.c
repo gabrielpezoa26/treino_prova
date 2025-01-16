@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:11:47 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 15:05:47 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:42:36 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,10 @@ int	main(int argc, char **argv)
 	dentro do while marca se tem espaço ou tab c a flag; dps bota o espaço onde precisa;
 	quebra de linha
 */
+
+
+
+
 /*Assignment name  : expand_str
 Expected files   : expand_str.c
 Allowed functions: write

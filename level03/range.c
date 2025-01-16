@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   range.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:11:58 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/12 17:05:36 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/16 16:43:00 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,33 @@
 
 int	*ft_range(int start, int end)
 {
-	int	*mango_loko;  //o resultado
+	int	*result;
 	int size;
 	int i;
 
 	size = abs(end - start) + 1;
 	if (start < end)  //validaçao q nao ta funfando
 	{
-		mango_loko = (int *) malloc(size * sizeof(int));
-		if (mango_loko == NULL)  //valicaçao malloc
+		result = (int *) malloc(size * sizeof(int));
+		if (result == NULL)  //valicaçao malloc
 			return (NULL);
 		i = 0;
 		while ((start + i) <= end)
 		{
-			mango_loko[i] = start + i;  //so aceita
+			result[i] = start + i;  //so aceita
 			i++;  //avanca pro proximo
 		}
-		return (mango_loko);
+		return (result);
 	}
 	return (NULL);
 }
 
-//		mango_loko = (int *) malloc(size * sizeof(int));
+//		mango_lo	ko = (int *) malloc(size * sizeof(int));
+/*
+
+*/
+
+
 
 //teste
 int	main(void)

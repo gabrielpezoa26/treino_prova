@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:33:08 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 15:08:57 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:42:42 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,10 @@ int main(int argc, char **argv)
 	dois iteradores; argc == 3; itera pelos dois argv; se o char for igual i++, se nao j++ ;
 	qdo chegar no final de argv[1] printa 1; 
 */
+
+
+
+
 /*Assignment name  : hidenp
 Expected files   : hidenp.c
 Allowed functions: write

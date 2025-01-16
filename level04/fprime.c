@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 13:13:36 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/13 18:33:00 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:51:36 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,17 @@ int	main(int argc, char **argv)
 	printf("\n");  //n esquecer da quebra de linha
 	return (0);
 }
+
+/*
+	validacao argc;  uma variavel e um index;  inicia 'i' em 1;
+	converte input p int;  de 1 é um;  while compara input com 'i' ja incrementado;
+	verifica se 'i' é fator de 'n' com %, se for, 6 linhas, reseta i = 1;
+	printa o '\n' no final;
+*/
+
+
+
+
 
 /*Assignment name  : fprime
 Expected files   : fprime.c

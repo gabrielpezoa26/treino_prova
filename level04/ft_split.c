@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:56:39 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/14 13:02:01 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:23:44 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,9 @@ char	**ft_split(char *str)
 	return (result);
 }
 
-
+/*
+	
+*/
 //teste
 int	main(void)
 {
