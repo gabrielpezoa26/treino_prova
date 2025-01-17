@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 14:06:34 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 15:27:32 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 13:29:04 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@ char *ft_strpbrk(const char *s1, const char *s2)
 	int i;
 
 	if (!s1 || !s2)  //tratativa de erro
-	{
 		return (0);
-	}
 	while(*s1 != NULL)  //enqt n apontar pra null
 	{
 		i = 0;

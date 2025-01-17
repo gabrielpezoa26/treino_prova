@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 18:41:29 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 11:28:11 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 13:41:18 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	rstr_capitalizer(char *str)
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')  //converte pra maiusculo
 			str[i] += 32;
-		if ((str[i] >= 'a' && str[i] <= 'z') && (str[i + 1] == ' ' 
-			|| str[i + 1] == '\t' || str[i + 1] == '\0'))  //[i + 1] pra pegar a ultima letra
+		if ((str[i] >= 'a' && str[i] <= 'z') && 
+				(str[i + 1] == ' ' || str[i + 1] == '\t' || str[i + 1] == '\0'))  //[i + 1] pra pegar a ultima letra
 			str[i] -= 32;  
 		write(1, &str[i++], 1);  //printa E incrementa 'i'
 	}

@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 19:33:43 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 15:31:47 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 13:04:50 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	max(int *tab, unsigned int len)
 //teste
 int	main(void)
 {
-	int beans[] = {12, 2, 35, 42, 58};
+	int beans[] = {12, 2, 335, 42, 58};
 
 	printf("%d\n", max(beans, 5));
 }

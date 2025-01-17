@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 15:48:08 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 10:59:00 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 13:12:23 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strcpy(char *s1, char *s2)
 		s1[i] = s2[i];
 		i++;
 	}
-	s1[i] = '\0';  //n esquecer do terminador
+	s1[i] = '\0';  // n esquecer do terminador
 	return (s1);
 }
 

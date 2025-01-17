@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 10:27:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/17 10:58:11 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 13:14:13 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int main(int argc, char **argv)
 	printa e itera enquanto for diferente de nulo, 32, 9;
 	printa quebra de linha;
 */
+
+
 /*Write a program that takes a string and displays its first word, followed by a
 newline.
 
