@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:11:58 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/16 16:43:00 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 11:14:14 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	*ft_range(int start, int end)
 	size = abs(end - start) + 1;
 	if (start < end)  //validaçao q nao ta funfando
 	{
-		result = (int *) malloc(size * sizeof(int));
+		result = malloc(size * sizeof(int));
 		if (result == NULL)  //valicaçao malloc
 			return (NULL);
 		i = 0;
@@ -36,7 +36,7 @@ int	*ft_range(int start, int end)
 	return (NULL);
 }
 
-//		mango_lo	ko = (int *) malloc(size * sizeof(int));
+//		mango_loko = (int *) malloc(size * sizeof(int));
 /*
 
 */

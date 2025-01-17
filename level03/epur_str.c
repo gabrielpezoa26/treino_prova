@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 15:51:21 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 16:42:37 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 11:30:54 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 		while (argv[1][i] != '\0')  //itera pelo argv[1]
 		{
 			if (argv[1][i] == ' ' || argv[1][i] == '\t')
-				flag = 1;                                //marca se tem espaços ou tab
+				flag = 1;                                //marca se tem espaço ou tab
 			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))  // se o char atual n for espaço (chegou na frase)
 			{
 				if (flag != 0)              //se precisar do espaço, printa espaço

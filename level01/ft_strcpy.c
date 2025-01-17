@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 15:48:08 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 14:27:55 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 10:59:00 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ char	*ft_strcpy(char *s1, char *s2)
 	return (s1);
 }
 
+/*
+	trata erro; itera e copia;  poe o terminador nulo;
+*/
 /*Assignment name  : ft_strcpy
 Expected files   : ft_strcpy.c
 Allowed functions:

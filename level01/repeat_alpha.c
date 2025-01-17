@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:39:03 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 14:30:00 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 10:53:56 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,9 @@ int main(int argc, char **argv)
 				repeat_count = argv[1][i] - 'A' + 1;
 			}
 			else
+			{
 				repeat_count = 1;
+			}
 			while (repeat_count > 0)
 			{
 				write(1, &argv[1][i], 1);
@@ -43,6 +45,10 @@ int main(int argc, char **argv)
 	write(1, "\n", 1);  //n esquecer
 	return (0);
 }
+
+/*
+	validacoa argc;  percorrer argv;
+*/
 
 // if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
 //    repeat_count = argv[1][i] - 'a' + 1;

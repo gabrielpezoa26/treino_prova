@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 18:29:24 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 14:32:27 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 10:54:59 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,9 @@ char *rev_print(char *str)
 	return (str);
 }
 
-
+/*
+	strlen;  itera de tras p frente e printa;  printa quebra de linha
+*/
 //teste
 int main(void)
 {

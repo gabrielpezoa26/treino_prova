@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 15:43:56 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 14:48:20 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 11:14:57 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,6 @@ int		main(int argc, char **argv)
 	write(1, "\n", 1);
 	return (0);
 }
-
-
-/*
-
-*/
-
-
 
 
 /*Assignment name  : last_word

@@ -3,24 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   parasum.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 10:30:59 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/16 23:47:41 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/17 11:09:10 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putnbr(int n)  //putnbr simplificado
+void	ft_putnbr(int n)
 {
 	char number;
 
 	if (n >= 10)  //enquanto for maior que 9
-		ft_putnbr(n / 10);  recursivo
+		ft_putnbr(n / 10);  //recursivo
 	number = (n % 10) + '0';
 	write(1, &number, 1);
 }
+
 
 int	main(int argc, char **argv)
 {

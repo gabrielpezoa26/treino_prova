@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 10:19:18 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/16 14:32:58 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 11:12:44 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int main(int argc, char **argv)
 	{
 		while (argv[1][i] != '\0')
 		{
-			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')  //confere q é letra minusc.
+			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')  //verifica se é letra minusc.
 			{
 				argv[1][i] -= 32;  //faz a conversao
 			}
-			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')  //confere letra maiusc.
+			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')  //verifica se letra maiusc.
 			{
 				argv[1][i] += 32;  //faz a conversao
 			}
@@ -36,7 +36,10 @@ int main(int argc, char **argv)
 	write(1, "\n", 1);  // n esquecer
 }
 
-// if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+/*>
+	validacao argc;  itera argv[1][i];  valida q é letra;  faz a conversao;
+	printa quebra de linha;
+*/
 
 
 /*

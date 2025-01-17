@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:11:47 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 16:42:36 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 11:25:13 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(int argc, char **argv)
 {
 	int i;
-	int flag;  //determina se precisa do espaço ou não
+	int flag;  //vê se precisa do espaço ou não
 
 	if (argc == 2)  //verificação do argc
 	{
@@ -30,14 +30,14 @@ int	main(int argc, char **argv)
 			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))  //se o char n for espaço é pq chegou na "frase"
 			{
 				if (flag != 0)  //poe os 3 espaços se necessário
-					write(1, "   ", 1);
+					write(1, "   ", 3);
 				flag = 0;    //reseta a flag
 				write(1, &argv[1][i], 1);  //printa o char atual
 			}
 			i++;
 		}
 	}
-	write(1, '\n', 1);  //n esquecer da quebra de linha
+	write(1, "\n", 1);  //n esquecer da quebra de linha
 }
 
 /*
@@ -45,10 +45,6 @@ int	main(int argc, char **argv)
 	dentro do while marca se tem espaço ou tab c a flag; dps bota o espaço onde precisa;
 	quebra de linha
 */
-
-
-
-
 /*Assignment name  : expand_str
 Expected files   : expand_str.c
 Allowed functions: write

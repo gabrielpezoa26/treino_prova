@@ -3,32 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   fizzbuzz.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:06:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/16 23:34:17 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/17 11:12:16 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putnbr(int number)
+void	ft_putnbr(int n)
 {
-	char	str[10] = "0123456789";  //array de dígitos
+	char number;
 
-	if (number > 9)
-		ft_putnbr(number / 10);  //recursivo
-	write (1, &str[number % 10], 1);  //printa o char atual
+	if (n >= 10)
+		ft_putnbr(n / 10);
+	number = (n % 10) + '0';
+	write(1, &number, 1);
 }
 
 int		main(void)
 {
 	int i;
 
-	i = 1;  //tem q ser 1
+	i = 1;
 	while (i <= 100)
 	{
-		if (i % 15 == 0)  //se for divisivel por 3 e 5
+		if (i % 15 == 0)
 		{
 			write (1, "fizzbuzz", 8);
 		}
@@ -41,11 +42,17 @@ int		main(void)
 			write (1, "buzz", 4);
 		}
 		else
-			ft_putnbr(i);  //simplesmente printa o numero
+		{
+			ft_putnbr(i);
+		}
 		i++;
 		write (1, "\n", 1);
 	}
 }
+
+/*
+	usa putnbr;  3 ifs e um else;  printa quebra de linha
+*/
 /*Assignment name  : fizzbuzz
 Expected files   : fizzbuzz.c
 Allowed functions: write

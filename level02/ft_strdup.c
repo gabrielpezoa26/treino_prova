@@ -6,11 +6,12 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 16:06:11 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 14:41:46 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 11:05:21 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 int	ft_strlen(char *string)
 {
@@ -18,9 +19,7 @@ int	ft_strlen(char *string)
 
 	count = 0;
 	while (string[count] != '\0')
-	{
 		count++;
-	}
 	return (count);
 }
 
@@ -29,7 +28,7 @@ char	*ft_strdup(char *src)
 	int		i;
 	char	*result;
 
-	result = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));  //aloca a memoria necessaria
+	result = malloc((ft_strlen(src) + 1) * sizeof(char));  //aloca a memoria necessaria
 	if (result == NULL || src == NULL)  //tratativa de erro
 		return (NULL);
 	i = 0;
@@ -45,7 +44,7 @@ char	*ft_strdup(char *src)
 	strlen, mallocar "result = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));", 
 	tratar NULL, percorrer src  e copiar; adicionar o nulo no final result[i]
 */
-//result = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
+
 //teste
 int	main(void)
 {

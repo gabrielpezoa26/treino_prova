@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 18:18:43 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/16 16:58:17 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 11:31:31 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,6 @@ void	ft_list_foreach(t_list *begin_list, void (*f)(void *))
 	1ª linha: (*Farofa)(Berinjela_Listrada->Dadinho)
 	2ª linha: Berinjela_Listrada = Berinjela_Listrada->Nhoque
 */
-
-
-
-
 /*Assignment name  : ft_list_foreach
 Expected files   : ft_list_foreach.c, ft_list.h
 Allowed functions:

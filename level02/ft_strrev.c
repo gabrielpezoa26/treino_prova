@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 20:12:28 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 15:45:08 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 11:05:29 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strrev(char *str)
 	}
 	end = len - 1;  //tira o terminador nulo
 	start = 0;
-	while (start < end)  //vai de traz pra frente
+	while (start < end)  //vai de tras pra frente
 	{
 		temp = str[start];  //       guarda no temp
 		str[start] = str[end];  //   substitui oq ta no 'start' pelo q ta no 'end'
