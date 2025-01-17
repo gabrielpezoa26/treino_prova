@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fizzbuzz.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:06:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/14 13:16:52 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/16 23:34:17 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_putnbr(int number)
 	write (1, &str[number % 10], 1);  //printa o char atual
 }
 
-int		main()
+int		main(void)
 {
 	int i;
 
