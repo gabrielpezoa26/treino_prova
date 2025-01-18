@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 15:52:06 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 11:19:22 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 22:46:04 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int	ft_strcmp(char *s1, char *s2)
 	int	index;
 
 	index = 0;
-	while (s1[index] != '\0' || s2[index] != '\0')  //LEMBRAR q é || e não &&
+	while (s1[index] != '\0' || s2[index] != '\0')
 	{
 		if (s1[index] != s2[index])
-			return (s1[index] - s2[index]);  //retorna a diferença
+			return (s1[index] - s2[index]);
 		index++;
 	}
 	return (0);

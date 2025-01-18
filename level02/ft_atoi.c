@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 16:22:39 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 11:19:23 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 22:44:13 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ int	ft_atoi(const char *str)
 	number = 0;
 	signal = 1;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)  //percorre os tabs espaços etc
-	{
 		i++;
-	}
 	if (str[i] == '-')
 	{
 		signal = (-1);  //transforma em negativo se for '-'

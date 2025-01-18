@@ -3,16 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   fizzbuzz.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:06:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/17 11:12:16 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 22:31:22 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 void	ft_putnbr(int n)
+{
+	char number;
+
+	if (n >= 10)
+		ft_putnbr(n / 10);
+	number = (n % 10) + '0';
+	write(1, &number, 1);
+}
+
+void ft_putnbr(int n)
 {
 	char number;
 
