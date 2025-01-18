@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fprime.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 13:13:36 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 16:51:36 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 20:47:59 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(int argc, char **argv)
 				printf("%d", i);  //printa o 'i' atual
 				if (number == i)  //para o loop pq chegou no último fator
 					break ;
-				printf("*");  //printa o *
+				printf("* ");  //printa o *
 				number /= i;  //passa pro proximo fator
 				i = 1;  //reseta o i pra 1, pra voltar pro while
 			}

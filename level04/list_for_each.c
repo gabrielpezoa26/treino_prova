@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_for_each.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 18:18:43 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/17 11:31:31 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 22:31:53 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 void	ft_list_foreach(t_list *begin_list, void (*f)(void *))
 {
-	while (begin_list)  //itera pela lista até chegar no final
+	while (begin_list)
 	{
-		(*f)(begin_list->data);  //aplica a função 'f'
-		begin_list = begin_list->next;  //avança o ponteiro pro próx, iterando
+		(*f)(begin_list->data);
+		begin_list = begin_list->next;
 	}
 }
 
 /*
 	criar o .h e incluir no .c;  while itera por 'begin_list';
-	1ª linha: (*Farofa)(Berinjela_Listrada->Dadinho)
-	2ª linha: Berinjela_Listrada = Berinjela_Listrada->Nhoque
+	1ª linha: (*Farofa)(Berinjela -> Dadinho)
+	2ª linha: Berinjela = Beringela -> Nhoque
 */
 /*Assignment name  : ft_list_foreach
 Expected files   : ft_list_foreach.c, ft_list.h

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:56:39 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 17:23:44 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/17 22:10:14 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,7 @@ char	**ft_split(char *str)
 		j++;
 		}
 		else
-		{
 			i++;  //só itera
-		}
 	}
 	result[j] = NULL;  //tipo um \0 pra array
 	return (result);
