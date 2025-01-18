@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:42:33 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 13:39:34 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/18 12:53:07 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	str_capitalizer(char *str)
 	if (str[i] >= 'a' && 'z' >= str[i])  //converte pra maiusculo
 		str[i] -= 32;
 	write(1, &str[i], 1);  //printa o char atual
-	while (str[i] != '\0')  //compara 'i' já incrementado com '\0'
+	while (str[i] != '\0')
 	{
 		if (str[i] >= 'A' && 'Z' >= str[i])  //verifica se é letra, e maiusculo
 			str[i] += 32;   //converte pra minusculo
@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 {
 	int j;
 
-	if (argc < 2)  //se n for passado argumentos printa quebra de linha
+	if (argc < 2)  //se n for passado args printa quebra de linha
 		write(1, "\n", 1);
 	else
 	{

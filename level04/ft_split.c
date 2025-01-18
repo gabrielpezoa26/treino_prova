@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:56:39 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 22:10:14 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/18 11:41:14 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,11 @@ char	**ft_split(char *str)
 	return (result);
 }
 
-/*
-	
-*/
 //teste
 int	main(void)
 {
 	char *beans;
-	beans = "hello aaa bbb";
+	beans = "hello  aaa  bbb";
 	char **kartoffel;
 	
 	kartoffel = ft_split(beans);

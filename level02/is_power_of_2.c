@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 11:11:19 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/17 11:00:53 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/18 12:44:02 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ int	is_power_of_2(unsigned int n)
 {
 	if (n == 0)
 		return (0);
-	return (n & (n - 1)) == 0;
+	while(n % 2 == 0)
+		n /= 2;
+	return (n == 1);
 }
 
 
 //teste
 int	main(void)
 {
-	int	number = 4;
-
-	printf("%d", is_power_of_2(number));
+	printf("%d", is_power_of_2(128));
 }
 /*
 Assignment name  : is_power_of_2

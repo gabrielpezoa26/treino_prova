@@ -6,34 +6,35 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:11:58 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/17 11:14:14 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/18 12:54:14 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int	*ft_range(int start, int end)
+int *ft_range(int start, int end)
 {
-	int	*result;
-	int size;
-	int i;
-
-	size = abs(end - start) + 1;
-	if (start < end)  //validaçao q nao ta funfando
+	int i = 0;
+	int len = abs((end - start)) + 1;
+	int *res = (int *)malloc(sizeof(int) * len);
+	
+	while (i < len)
 	{
-		result = malloc(size * sizeof(int));
-		if (result == NULL)  //valicaçao malloc
-			return (NULL);
-		i = 0;
-		while ((start + i) <= end)
+		if (start < end)
 		{
-			result[i] = start + i;  //so aceita
-			i++;  //avanca pro proximo
+			res[i] = start;
+			start++;
+			i++;
 		}
-		return (result);
+		else
+		{
+			res[i] = start;
+			start--;
+			i++;
+		}
 	}
-	return (NULL);
+        return (res);
 }
 
 //		mango_loko = (int *) malloc(size * sizeof(int));

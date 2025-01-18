@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 13:49:36 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 15:41:14 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/18 12:46:40 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,25 +18,15 @@ int main(int argc, char **argv)
 	if (argc == 4)  //verificacao
 	{
 		if (argv[2][0] == '+')
-		{
 			printf("%d", (atoi(argv[1]) + atoi(argv[3])));
-		}
 		if (argv[2][0] == '-')
-		{
 			printf("%d", (atoi(argv[1]) - atoi(argv[3])));
-		}
 		if (argv[2][0] == '*')
-		{
 			printf("%d", (atoi(argv[1]) * atoi(argv[3])));
-		}
 		if (argv[2][0] == '/')
-		{
 			printf("%d", (atoi(argv[1]) / atoi(argv[3])));
-		}
 		if (argv[2][0] == '%')
-		{
 			printf("%d", (atoi(argv[1]) % atoi(argv[3])));
-		}
 	}
 	printf("\n");  //printa a quebra de linha independente do argc
 	return (0);

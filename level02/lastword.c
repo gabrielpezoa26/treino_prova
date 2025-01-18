@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 15:43:56 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 11:14:57 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/18 12:45:08 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	last_word(char *str)
 	j = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] == ' ' && str[i + 1] >= 33 && str[i + 1] <= 126)  //verifica se eh imprimivel
+		if (str[i] == ' ' && str[i + 1] >= 33 && str[i + 1] <= 126)
 			j = i + 1;  //vai pro primeiro char da prox palavra
 		i++;
 	}

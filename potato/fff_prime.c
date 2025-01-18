@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fprime.c                                           :+:      :+:    :+:   */
+/*   fff_prime.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/12 13:13:36 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/18 11:41:58 by gcesar-n         ###   ########.fr       */
+/*   Created: 2025/01/18 11:12:56 by gcesar-n          #+#    #+#             */
+/*   Updated: 2025/01/18 11:23:56 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,44 +15,32 @@
 
 int	main(int argc, char **argv)
 {
-	int	i;
 	int	number;
+	int	potato;
 
-	if (argc == 2)  //validacao argc
+	if (argc == 2)
 	{
-		i = 1;  //tem q comecar em 1 pra entrar no while
-		number = atoi(argv[1]);  //converte o input pra int
-		if (number == 1)  //resultado de 1 é 1
+		number = atoi(argv[1]);
+		potato = 2;
+		if (number == 1)
 			printf("1");
-		while (number >= ++i)  //compara 'number' com o 'i' já incrementado, pq sim
+		while (number > 1)
 		{
-			if (number % i == 0)  //verifica se 'i' é um divisor de 'number', ou seja, se é um fator
+			if (number % potato == 0)
 			{
-				printf("%d", i);  //printa o 'i' atual
-				if (number == i)  //para o loop pq chegou no último fator
-					break ;
-				printf("*");  //printa o *
-				number /= i;  //passa pro proximo fator
-				i = 1;  //reseta o i pra 1, pra voltar pro while
+				printf("%d", potato);
+				number /= potato;
+				if (number > 1)
+					printf("*");
 			}
+			else 
+				potato++;
 		}
 	}
-	printf("\n");  //n esquecer da quebra de linha
-	return (0);
+	printf("\n");
 }
-
 /*
-	validacao argc;  uma variavel e um index;  inicia 'i' em 1;
-	converte input p int;  de 1 é um;  while compara input com 'i' ja incrementado;
-	verifica se 'i' é fator de 'n' com %, se for, 6 linhas, reseta i = 1;
-	printa o '\n' no final;
-*/
-
-
-
-
-
-/*Assignment name  : fprime
+Assignment name  : fprime
 Expected files   : fprime.c
 Allowed functions: printf, atoi
 --------------------------------------------------------------------------------

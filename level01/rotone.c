@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotone.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 18:05:34 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 18:28:36 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/18 09:27:00 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,9 @@ int main(int argc, char **argv)
 		while (argv[1][i])
 		{
 			if (argv[1][i] >= 'a' && argv[1][i] <= 'y')
-			{
 				argv[1][i] += 1;
-			}
 			if (argv[1][i] >= 'A' && argv[1][i] <= 'Y')
-			{
 				argv[1][i] += 1;
-			}
 			if (argv[1][i] == 'z' || argv[1][i] == 'Z')
 			{
 				argv[1][i] -= 25;
