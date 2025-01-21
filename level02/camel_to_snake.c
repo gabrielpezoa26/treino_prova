@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 13:41:30 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 15:18:43 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/19 11:55:28 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 		{
 			if(argv[1][i] >= 'A' && argv[1][i] <= 'Z')
 			{
-				argv[1][i] = argv[1][i] + 32;  //converte pra lowercase
+				argv[1][i] += 32;  //converte pra lowercase
 				write (1, "_", 1);
 			}
 			write(1, &argv[1][i], 1);  //printa o char atual
