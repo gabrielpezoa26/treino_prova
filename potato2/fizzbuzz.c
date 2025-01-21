@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fizzbuzz.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 15:53:58 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/19 16:09:35 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/21 17:33:18 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(void)
 	int i;
 
 	i = 1;
-	while (i <= 10)
+	while (i <= 100)
 	{
 		if (i % 15 == 0)
 			write(1, "fizzbuzz", 8);

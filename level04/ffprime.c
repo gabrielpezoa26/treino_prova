@@ -9,6 +9,8 @@ int main(int argc, char **argv)
 	if (argc == 2)
 	{
 		number = atoi(argv[1]);
+		if (number == 1)
+			printf("1");
 		i = 2;
 		while (number > 1)
 		{

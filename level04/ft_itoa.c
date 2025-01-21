@@ -6,57 +6,101 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:51:17 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 16:58:19 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/21 17:17:36 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include <stdlib.h>
-#include <stdio.h>
 
-int convert_to_str(int nbr)
+int	ft_strlen(char *string)
 {
-	int i;
+	int	count;
 
-	if (nbr == 0)
-		return (1);
-	i = 0;
-	while (nbr != 0)
-	{
-		nbr /= 10;
-		i++;
-	}
-	return (i);
+	count = 0;
+	while (string[count] != '\0')
+		count++;
+	return (count);
 }
 
-int get_absolute(int nbr)
+char	*ft_strdup(char *src)
 {
-	if (nbr < 0)
-		return (-nbr);
-	return (nbr);
-}
-char *ft_itoa(int nbr)
-{
-	char *cnum;
-	int len;
-	int i;
+	int		i;
+	char	*result;
 
-	len = convert_to_str(nbr);
-	i = 0;
-	if (nbr < 0)
-		i++;
-	len = len + i;
-	cnum = (char *)malloc((len + 1) * sizeof(char));
-	if (!cnum)
+	result = malloc((ft_strlen(src) + 1) * sizeof(char));
+	if (result == NULL || src == NULL)
 		return (NULL);
-	cnum[0] = '-';
-	cnum[len] = '\0';
-	while ((len - 1) >= i)
+	i = 0;
+	while (src[i] != '\0')
 	{
-		cnum[len - 1] = get_absolute(nbr % 10) + '0';
-		nbr /= 10;
-		len--;
+		result[i] = src[i];
+		i++;
 	}
-	return (cnum);
+	result[i] = '\0';
+	return (result);
+}
+
+static size_t	ft_calculate_len(int value)
+{
+	size_t	size;
+
+	size = 0;
+	if (value == 0)
+		return (1);
+	else if (value < 0)
+	{
+		value *= -1;
+		size++;
+	}
+	while (value > 0)
+	{
+		value /= 10;
+		size++;
+	}
+	return (size);
+}
+
+static void	ft_convert_to_str(char *string, unsigned int num, size_t len)
+{
+	size_t	index;
+
+	index = len - 1;
+	while (num > 0)
+	{
+		string[index] = (num % 10) + '0';
+		num /= 10;
+		index--;
+	}
+}
+
+char	*ft_itoa(int n)
+{
+	size_t			len;
+	unsigned int	num;
+	char			*result;
+
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	len = ft_calculate_len(n);
+	result = (char *)malloc((len + 1) * sizeof(char));
+	if (result == 0)
+		return (NULL);
+	result[len] = '\0';
+	if (n == 0)
+	{
+		result[0] = '0';
+		return (result);
+	}
+	if (n < 0)
+	{
+		result[0] = '-';
+		num = -n;
+	}
+	else
+		num = n;
+	ft_convert_to_str(result, num, len);
+	return (result);
 }
 
 /*

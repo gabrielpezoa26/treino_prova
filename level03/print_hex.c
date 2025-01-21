@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 15:54:57 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/18 12:52:04 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/21 17:34:22 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,6 @@ void	ft_printhex(int n)
 	if (n >= 16)
 		ft_printhex(n / 16);
 	write(1, &hex_digits[n % 16], 1);
-}
-
-
-void	ft_puthex(int *n)
-{
-	char	*beans = "abcdef0123456789";
-
-	if (n >= 16)
-		ft_puthex /= 16;
-	write(1, &beans[n] % 16, 1);
 }
 
 int	main(int argc, char **argv)
