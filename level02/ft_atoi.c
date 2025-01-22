@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 16:22:39 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 22:44:13 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/22 19:15:47 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,25 @@
 int	ft_atoi(const char *str)
 {
 	int	i;
+	int signal;
 	int	number;
-	int	signal;
 
 	i = 0;
 	number = 0;
 	signal = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)  //percorre os tabs espaços etc
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32 || str[i] == '+')
 		i++;
 	if (str[i] == '-')
 	{
-		signal = (-1);  //transforma em negativo se for '-'
+		signal = (-1);
 		i++;
 	}
-	else if (str[i] == '+')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')  //verifica se é um digito unico
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		number = number * 10 + (str[i] - '0');  //transforma de fato
-		i++;  //passa pro proximo
+		number = number * 10 + (str[i] - '0');
+		i++;
 	}
-	return (number * signal);  //retorno dos campeoes
+	return (number * signal);
 }
 
 /*
@@ -45,9 +43,9 @@ int	ft_atoi(const char *str)
 //teste
 int main(void)
 {
-	char *potato = "  -863";
+	const char *example = "  -863";
 
-	printf("%d\n", ft_atoi(potato));
+	printf("%d\n", ft_atoi(example));
 }
 /*
 Assignment name  : ft_atoi
@@ -63,4 +61,28 @@ It works much like the standard atoi(const char *str) function, see the man.
 Your function must be declared as follows:
 
 int	ft_atoi(const char *str);
-*/
+*///int	ft_atoi(const char *str)
+// {
+// 	int	i;
+// 	int	number;
+// 	int	signal;
+
+// 	i = 0;
+// 	number = 0;
+// 	signal = 1;
+// 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)  //percorre os tabs espaços etc
+// 		i++;
+// 	if (str[i] == '-')
+// 	{
+// 		signal = (-1);  //transforma em negativo se for '-'
+// 		i++;
+// 	}
+// 	else if (str[i] == '+')
+// 		i++;
+// 	while (str[i] >= '0' && str[i] <= '9')  //verifica se é um digito unico
+// 	{
+// 		number = number * 10 + (str[i] - '0');  //transforma de fato
+// 		i++;  //passa pro proximo
+// 	}
+// 	return (number * signal);  //retorno dos campeoes
+// }

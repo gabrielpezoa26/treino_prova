@@ -6,44 +6,44 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:11:58 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/18 12:54:14 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/22 19:58:27 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-int *ft_range(int start, int end)
+int	*ft_range(int start, int end)
 {
-	int i = 0;
-	int len = abs((end - start)) + 1;
-	int *res = (int *)malloc(sizeof(int) * len);
-	
-	while (i < len)
+	int	i;
+	int	*dest;
+
+	i = 0;
+	dest = (int *)malloc((end - start) * sizeof(int));
+	if(!dest)
+		return(NULL);
+	if (start >= end)
+		return (NULL);
+	else if (start < end)
 	{
-		if (start < end)
+		while ((start + i) <= end)
 		{
-			res[i] = start;
-			start++;
-			i++;
-		}
-		else
-		{
-			res[i] = start;
-			start--;
+			dest[i] = start + i;
 			i++;
 		}
 	}
-        return (res);
+	return (dest);
 }
 
-//		mango_loko = (int *) malloc(size * sizeof(int));
-/*
-
-*/
-
-
-
+// int	main(int argc, char **argv)
+// {
+// 	int number1 = atoi(argv[1]);
+// 	int number2 = atoi (argv[2]);
+// 	if (argc == 3)
+// 	{
+// 		printf("%d %d", ft_range(number1, number2));
+// 	}
+// }
 //teste
 int	main(void)
 {
@@ -52,7 +52,7 @@ int	main(void)
 	int	start;
 	int	*kartoffel;
 
-	start = 1;
+	start = 3;
 	end = 10;
 	j = 0;
 	if (start == end)
@@ -84,4 +84,28 @@ Examples:
 - With (1, 3) you will return an array containing 1, 2 and 3.
 - With (-1, 2) you will return an array containing -1, 0, 1 and 2.
 - With (0, 0) you will return an array containing 0.
-- With (0, -3) you will return an array containing 0, -1, -2 and -3.*/
+- With (0, -3) you will return an array containing 0, -1, -2 and -3.*///int *ft_range(int start, int end)
+// {
+// 	int i = 0;
+// 	int len = abs((end - start)) + 1;
+// 	int *res = (int *)malloc(sizeof(int) * len);
+	
+// 	while (i < len)
+// 	{
+// 		if (start < end)
+// 		{
+// 			res[i] = start;
+// 			start++;
+// 			i++;
+// 		}
+// 		else
+// 		{
+// 			res[i] = start;
+// 			start--;
+// 			i++;
+// 		}
+// 	}
+// 		return (res);
+// }
+
+//		mango_loko = (int *) malloc(size * sizeof(int));
