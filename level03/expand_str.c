@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:11:47 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 11:25:13 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/23 16:21:58 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 	{
 		i = 0;
 		flag = 0;
-		while (argv[1][i] == ' ' || argv[1][i] == '\t')  //só percorre espaço/tabss antes do argv[1]
+		while (argv[1][i] == ' ' || argv[1][i] == '\t')  //só percorre espaço/tabs antes do argv[1]
 			i++;
 		while (argv[1][i] != '\0')  //percorre argv[1] inteiro
 		{

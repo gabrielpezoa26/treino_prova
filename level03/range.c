@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:11:58 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/22 19:58:27 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/23 18:51:34 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	*ft_range(int start, int end)
 
 	i = 0;
 	dest = (int *)malloc((end - start) * sizeof(int));
-	if(!dest)
+	if(dest == NULL)
 		return(NULL);
 	if (start >= end)
 		return (NULL);
@@ -57,7 +57,7 @@ int	main(void)
 	j = 0;
 	if (start == end)
 		return (1);
-	kartoffel = ft_range(start, end);
+	kartoffel = ft_range(start, end);/* condition */
 	while (j != (end - start + 1))
 	{
 		printf("%d\n", kartoffel[j]);
@@ -66,6 +66,8 @@ int	main(void)
 	free(kartoffel);
 	return (0);
 }
+
+
 /*Assignment name  : ft_range
 Expected files   : ft_range.c
 Allowed functions: malloc

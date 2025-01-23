@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:56:39 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/18 11:41:14 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/23 18:41:15 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,25 +24,25 @@ char	**ft_split(char *str)
 	i = 0;
 	j = 0;
 	result = malloc(WD_LEN);
-	while (str[i] != '\0')  //percorre ate o final
+	while (str[i] != '\0')
 	{
-		if (str[i] > 32)  //pula espaços tabs etc p percorrer as palavras
+		if (str[i] > 32)
 		{
-			k = 0;  //zera o 'k' pra começar a processar outra palavra
-			result[j] = malloc(WD_LEN);  //aloca memoria pra palavra no [j]
+			k = 0;
+			result[j] = malloc(WD_LEN);
 			while (str[i] > 32)
 			{
-				result[j][k] = str[i];  //copia o char de str[i] pro array
+				result[j][k] = str[i];
 				j++;
 				i++;
 			}
-		result[j][k] = '\0';  //adiciona o terminador
+		result[j][k] = '\0';
 		j++;
 		}
 		else
-			i++;  //só itera
+			i++;
 	}
-	result[j] = NULL;  //tipo um \0 pra array
+	result[j] = NULL;
 	return (result);
 }
 

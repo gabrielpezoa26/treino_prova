@@ -1,18 +1,16 @@
 #include <unistd.h>
 
-void	ft_putchar(char c)
+static void	ft_putnbr(int n)
 {
-	write(1, &c, 1);
+	char number;
+
+	if (n >= 10)
+		ft_putnbr(n / 10);
+	number = (n % 10) + '0';
+	write(1, &number, 1);
 }
 
-void	ft_putnbr(int nb)
-{
-	if (nb / 10 > 0)
-		ft_putnbr(nb / 10);
-	ft_putchar(nb % 10 + '0');
-}
-
-int	ft_atoi(char *str)
+static int	ft_atoi(char *str)
 {
 	int	result;
 	int	sign;
@@ -42,15 +40,15 @@ int	main(int argc, char **argv)
 	{
 		i = 1;  
 		nbr = ft_atoi(argv[1]);
-		while (i <= 9 && nbr <= 238609183)
+		while (i <= 9)
 		{
-			ft_putnbr(i);
+			ft_putnbr(i);  //1º numero 
 			write(1, " x ", 3);
-			ft_putnbr(nbr);
+			ft_putnbr(nbr);  //numero do parametro
 			write(1, " = ", 3);
-			ft_putnbr(i * nbr);
+			ft_putnbr(i * nbr);  //resultado
 			write(1, "\n", 1);
-			i += 1;
+			i++;
 		}
 	}
 	return (0);

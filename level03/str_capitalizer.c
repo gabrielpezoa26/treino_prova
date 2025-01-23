@@ -6,49 +6,51 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:42:33 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/18 12:53:07 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/23 18:15:08 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	str_capitalizer(char *str)
+int	main(int argc, char **argv)
 {
 	int i;
 
-	i = 0;
-	if (str[i] >= 'a' && 'z' >= str[i])  //converte pra maiusculo
-		str[i] -= 32;
-	write(1, &str[i], 1);  //printa o char atual
-	while (str[i] != '\0')
+	if (argc == 2)
 	{
-		if (str[i] >= 'A' && 'Z' >= str[i])  //verifica se é letra, e maiusculo
-			str[i] += 32;   //converte pra minusculo
-		if ((str[i] >= 'a' && 'z' >= str[i]) && (str[i - 1] == ' ' || str[i - 1] == '\t'))  //verifica se é uma primeira letra
-			str[i] -= 32;  //converte pra maiusculo
-		++i;
-		write(1, &str[i], 1);  //printa o char atual
-	}
-}
-
-int main(int argc, char **argv)
-{
-	int j;
-
-	if (argc < 2)  //se n for passado args printa quebra de linha
-		write(1, "\n", 1);
-	else
-	{
-		j = 1;
-		while (j < argc)  //percorre todos os argumentos
+		i = 0;
+		while (argv[1][i] != '\0')
 		{
-			str_capitalizer(argv[j]);  //chama a func
-			write(1, "\n", 1);
-			j++;  //avança pro proximo
+			if ((i == 0 || argv[1][i - 1] == ' ' || argv[1][i - 1] == '\t') && (argv[1][i] >= 'a' && argv[1][i] <= 'z'))
+				argv[1][i] -= 32;
+			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z' && argv[1][i - 1] != ' ' && argv[1][i - 1] != '\t')
+				argv[1][i] += 32;
+			write(1, &argv[1][i], 1);
+			i++;
 		}
 	}
+	write(1, "\n", 1);
 	return (0);
 }
+
+// int main(int argc, char **argv)
+// {
+// 	int j;
+
+// 	if (argc < 2)  //se n for passado args printa quebra de linha
+// 		write(1, "\n", 1);
+// 	else
+// 	{
+// 		j = 1;
+// 		while (j < argc)  //percorre todos os argumentos
+// 		{
+// 			str_capitalizer(argv[j]);  //chama a func
+// 			write(1, "\n", 1);
+// 			j++;  //avança pro proximo
+// 		}
+// 	}
+// 	return (0);
+// }
 
 /*
 	na func -> converte pra maiusculo; printa o char atual; compara 'i' ja incrementado com '\0';

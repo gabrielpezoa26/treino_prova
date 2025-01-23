@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 18:24:17 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/13 18:28:18 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/23 16:14:58 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ t_list *sort_list(t_list* lst, int (*cmp)(int, int))
 	}
 	return (start);
 }
+
 /*Assignment name  : sort_list
 Expected files   : sort_list.c
 Allowed functions:

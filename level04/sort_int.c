@@ -3,30 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   sort_int.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:49:41 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/19 14:27:00 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/23 17:25:38 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+
 void sort_int_tab(int *tab, unsigned int size)
 {
 	unsigned int	i;
 	int				temp;
 
 	i = 0;
-	while (i < (size - 1))  // ' - 1' por causa do nulo
+	while (i < (size - 1))  // tira o nulo
 	{
-		if (tab[i] > tab[i + 1])  //se o numero atual for maior, tem q trocar
+		if (tab[i] > tab[i + 1])
 		{
 			temp = tab[i];
 			tab[i] = tab[i + 1];
-			tab[i + 1] = temp;  //faz a troca
+			tab[i + 1] = temp;
 			i = 0;  //reseta o i = 0
 		}
-		else  //se n precisar de trocar, avança pro proximo
+		else  //n precisa trocar
 			i++;
 	}
 }

@@ -6,33 +6,32 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 12:56:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/16 17:22:05 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/23 18:11:17 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "ft_list.h"  //n esquecer
+#include "ft_list.h"
 
 void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 {
-	t_list *current_node;  //guarda o nodo atual
+	t_list *current_node;
 	
-	if (begin_list == NULL || *begin_list == NULL)  //tratativa de erro
+	if (begin_list == NULL || *begin_list == NULL)
 		return ;
-	current_node = *begin_list;  //aponta pro começo da lista
-	if (cmp(current_node->data, data_ref) == 0)  // compara 'current_node' com 'data_ref'  se der "match"
+	current_node = *begin_list;
+	if (cmp(current_node->data, data_ref) == 0)
 	{
-		*begin_list = current_node->next;  //avança pro proximo nodo
-		free(current_node);  //remove o nodo
-		ft_list_remove_if(begin_list, data_ref, cmp);  //recursivo
+		*begin_list = current_node->next;
+		free(current_node);
+		ft_list_remove_if(begin_list, data_ref, cmp);
 	}
-	else  // se der "match"      tem q ter o else p moulinette !!!
+	else //tem q ter o else p moulinette !!!
 	{
 		current_node = *begin_list;
-		ft_list_remove_if(&current_node->next, data_ref, cmp);  //só avança pro próx. nodo
+		ft_list_remove_if(&current_node->next, data_ref, cmp);
 	}
 }
-
 
 /*
 	tratativa de erro;  declara 't_list';  aponta pro começo da lista;

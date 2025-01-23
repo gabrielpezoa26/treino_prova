@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rev_wstr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 15:01:12 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/18 18:33:01 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/23 16:21:22 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 			i++;
 		while(i >= 0)  //começa a iterar, de tras p frente
 		{
-			while( argv[1][i] == '\0' || argv[1][i] == ' ' || argv[1][i] == '\t')  //tira o espaço em branco depois da string
+			while(argv[1][i] == '\0' || argv[1][i] == ' ' || argv[1][i] == '\t')  //tira o espaço em branco depois da string
 				i--;  //tira o espaço em branco depois da string
 			end = i; //marca o ultimo char 
 			while(argv[1][i] && argv[1][i] != ' ' && argv[1][i] != '\t')  //percorre a palavra ate o primeiro char

@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:04:17 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/16 16:46:16 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/23 18:41:32 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	*ft_rrange(int start, int end)
 	if (n < 0)
 		(n *= -1);
 	n++;
-
 	range = (int *)malloc(sizeof(int) * n);
 	if (range)
 	{

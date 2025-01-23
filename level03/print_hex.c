@@ -6,22 +6,22 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 15:54:57 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/21 17:34:22 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/23 16:26:06 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_atoi(char *str)  //atoi simplificado
+int	ft_atoi(char *str)
 {
 	int n;
 
 	n = 0;
-	while (*str != '\0')  //percorre str todo
+	while (*str != '\0')
 	{
 		n = n * 10;
 		n = n + *str - '0';
-		++str;
+		str++;
 	}
 	return (n);
 }

@@ -1,39 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swapbits.c                                         :+:      :+:    :+:   */
+/*   reverse_bits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/02 18:38:01 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/23 18:15:18 by gcesar-n         ###   ########.fr       */
+/*   Created: 2025/01/23 15:12:40 by gcesar-n          #+#    #+#             */
+/*   Updated: 2025/01/23 18:15:33 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-unsigned char	swap_bits(unsigned char octet)
+unsigned char	reverse_bits(unsigned char octet)
 {
-	return ((octet >> 4) | (octet << 4));
+	int		i = 8;
+	unsigned char	result = 0;
+
+	while (i > 0)
+	{
+		result = result * 2 + (octet % 2);
+		octet = octet / 2;
+		i--;
+	}
+	return (result);
 }
 
-/*Assignment name  : swap_bits
-Expected files   : swap_bits.c
+
+/*
+Assignment name  : reverse_bits
+Expected files   : reverse_bits.c
 Allowed functions:
 --------------------------------------------------------------------------------
 
-Write a function that takes a byte, swaps its halves (like the example) and
-returns the result.
+Write a function that takes a byte, reverses it, bit by bit (like the
+example) and returns the result.
 
 Your function must be declared as follows:
 
-unsigned char	swap_bits(unsigned char octet);
+unsigned char	reverse_bits(unsigned char octet);
 
 Example:
 
   1 byte
 _____________
- 0100 | 0001
-     \ /
-     / \
- 0001 | 0100*/
+ 0010  0110
+	 ||
+	 \/
+ 0110  0100
+*/
