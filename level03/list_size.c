@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_size.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 12:55:37 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/18 12:55:47 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/23 22:24:50 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_list_size(t_list *begin_list)
 	else
 		return (1 + ft_list_size(begin_list->next));
 }
-
+//  1+ Farofa (Beringela->Nhoque)
 /*
 
 Assignment name  : ft_list_size

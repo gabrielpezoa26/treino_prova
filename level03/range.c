@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   range.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:11:58 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/23 18:51:34 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/23 21:45:55 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,13 @@ int	*ft_range(int start, int end)
 
 	i = 0;
 	dest = (int *)malloc((end - start) * sizeof(int));
+
 	if(dest == NULL)
 		return(NULL);
+
 	if (start >= end)
 		return (NULL);
+		
 	else if (start < end)
 	{
 		while ((start + i) <= end)
@@ -35,15 +38,6 @@ int	*ft_range(int start, int end)
 	return (dest);
 }
 
-// int	main(int argc, char **argv)
-// {
-// 	int number1 = atoi(argv[1]);
-// 	int number2 = atoi (argv[2]);
-// 	if (argc == 3)
-// 	{
-// 		printf("%d %d", ft_range(number1, number2));
-// 	}
-// }
 //teste
 int	main(void)
 {
