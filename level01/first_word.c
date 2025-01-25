@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   first_word.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 10:27:55 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/17 13:14:13 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:30:26 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ int main(int argc, char **argv)
 	int i;
 
 	i = 0;
-	if (argc == 2)  //validaçao do argc
+	if (argc == 2)
 	{
-		while (argv[1][i] == 32 || argv[1][i] == 9)  //só anda pelos espaços e tab
+		while (argv[1][i] == ' ' || argv[1][i] == '\t')
 			i++;
-		while (argv[1][i] && (argv[1][i] != 32 && argv[1][i] != 9))  //enqt argv for diferente de \0, espaços e tabs
+		while (argv[1][i] && (argv[1][i] != ' ' && argv[1][i] != '\t'))
 		{
-			write(1, &argv[1][i], 1);  //escreve o char atual
+			write(1, &argv[1][i], 1);
 			i++;
 		}
 	}
@@ -31,8 +31,8 @@ int main(int argc, char **argv)
 }
 
 /*
-	validacao argc;  percorre os tab e espaço (32, 9);
-	printa e itera enquanto for diferente de nulo, 32, 9;
+	validacao argc;  percorre os tab e espaço;
+	printa e itera enquanto for diferente de nulo;
 	printa quebra de linha;
 */
 

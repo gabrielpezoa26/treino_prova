@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lastword.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 15:43:56 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/19 11:33:01 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:46:44 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	last_word(char *str)
 {
-	int	i;  //itera pela string inteira
-	int	j;  //itera pela ultima palavra
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] == ' ' && str[i + 1] >= 33 && str[i + 1] <= 126)
-			j = i + 1;  //vai pro primeiro char da prox palavra
+			j = i + 1;
 		i++;
 	}
 	while (str[j] >= 33 && str[j] <= 127)
@@ -31,10 +31,9 @@ void	last_word(char *str)
 		j++;
 	}
 }
-
 int		main(int argc, char **argv)
 {
-	if (argc == 2)  //verificaçao do argc
+	if (argc == 2)
 		last_word(argv[1]);
 	write(1, "\n", 1);
 	return (0);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 15:48:08 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 13:12:23 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:12:38 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ char	*ft_strcpy(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	if (s1 == NULL || s2 == NULL)  //tratativa de erro
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	while (s2[i] != '\0')  //copia enquanto n chegar no fim de s2
+	while (s2[i] != '\0')
 	{
 		s1[i] = s2[i];
 		i++;
 	}
-	s1[i] = '\0';  // n esquecer do terminador
+	s1[i] = '\0';
 	return (s1);
 }
 

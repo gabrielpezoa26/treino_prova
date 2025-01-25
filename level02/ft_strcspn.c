@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 13:37:56 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/16 15:43:45 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:35:32 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ size_t	ft_strcspn(const char *s, const char *reject)
 	size_t	j;  //itera pelo 'reject'
 
 	i = 0;
-	if (s == NULL || reject == NULL)  //tratativa de erro
+	if (s == NULL || reject == NULL)
 		return (0);
 	while (s[i] != '\0')
 	{
 		j = 0;
-		while (reject[j] != '\0')  //percorre 'reject' ate o nulo
+		while (reject[j] != '\0')
 		{
-			if (s[i] == reject[j])  // compara o char atual de 's' com todos de 'reject'
+			if (s[i] == reject[j])
 				return (i);
 			j++;
 		}

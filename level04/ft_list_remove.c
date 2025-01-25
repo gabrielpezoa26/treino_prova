@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list_remove.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 12:56:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/23 18:11:17 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:56:52 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 		free(current_node);
 		ft_list_remove_if(begin_list, data_ref, cmp);
 	}
-	else //tem q ter o else p moulinette !!!
+	else //tem q ter o else
 	{
 		current_node = *begin_list;
 		ft_list_remove_if(&current_node->next, data_ref, cmp);

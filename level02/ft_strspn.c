@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strspn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 13:48:10 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/16 15:42:55 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:40:46 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@
 size_t	ft_strspn(const char *s, const char *accept)
 {
 	size_t	i;
-	size_t	count;  //conta o tamanho
+	size_t	count;
 
 	i = 0;
 	count = 0;
-	while (*s) //itera por tds os itens de 's'
+	while (*s)
 	{
 		while (accept[i] != '\0' && *s != accept[i])
 		{
 			i++;
 		}
-		if (accept[i] == '\0')  //pq chegou no final
+		if (accept[i] == '\0')
 			return (count);
 		i = 0;
 		count++;
-		s++;  //avança pro proximo char de 's'
+		s++;
 	}
 	return (count);
 }

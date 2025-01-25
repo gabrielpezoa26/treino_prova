@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   epur_str.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 15:51:21 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 11:30:54 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:55:14 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 int	main(int argc, char **argv)
 {
 	int i;
-	int flag;  //tipo um 'id' p ver se precisa do espaço
+	int flag;
 	
 	if (argc == 2)
 	{
 		i = 0;
 		flag = 0;
-		while (argv[1][i] == ' ' || argv[1][i] == '\t')  //so anda pelos tab e espaço
+		while (argv[1][i] == ' ' || argv[1][i] == '\t')
 			i++;
-		while (argv[1][i] != '\0')  //itera pelo argv[1]
+		while (argv[1][i] != '\0')
 		{
 			if (argv[1][i] == ' ' || argv[1][i] == '\t')
-				flag = 1;                                //marca se tem espaço ou tab
-			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))  // se o char atual n for espaço (chegou na frase)
+				flag = 1;
+			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))
 			{
-				if (flag != 0)              //se precisar do espaço, printa espaço
+				if (flag != 0)
 					write(1, " ", 1);
-				flag = 0;                  // reseta a flag
-				write(1, &argv[1][i], 1);  //printa o char atual
+				flag = 0;
+				write(1, &argv[1][i], 1);
 			}
 			i++;  //passa pro proximo
 		}

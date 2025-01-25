@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   snake_to_camel.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 13:34:01 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 15:20:47 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:53:16 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,20 @@ int main(int argc, char **argv)
 	int i;
 
 	i = 0;
-	if (argc == 2)  //verificação do argc
+	if (argc == 2)
 	{
-		while(argv[1][i] != '\0')  //percorre a string ate o final
+		while(argv[1][i] != '\0')
 		{
-			if (argv[1][i] == '_')  //se o char atual for '_', converte o char seguinte pra uppercase
+			if (argv[1][i] == '_')
 			{
 				i++;
 				argv[1][i] = argv[1][i] - 32;
 			}
-			write (1, &argv[1][i], 1);  //printa o char, convertido ou não
+			write (1, &argv[1][i], 1);
 			i++;
 		}
 	}
-	write(1, "\n", 1);  //poe a nova linha independente do 'argc'
+	write(1, "\n", 1);
 	return (0);
 }
 

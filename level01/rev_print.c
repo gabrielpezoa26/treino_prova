@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rev_print.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 18:29:24 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/23 18:14:57 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:15:32 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ static int	ft_strlen(char *s)
 
 char *rev_print(char *str)
 {
-	int size;
+	int i;
 
-	size = ft_strlen(str) - 1;
-	while (str[size] >= 0)  //itera de tras p frente
+	i = ft_strlen(str) - 1;
+	while (str[i] >= 0)
 	{
-		write(1, &str[size], 1);
-		size--;
+		write(1, &str[i], 1);
+		i--;
 	}
 	write(1, "\n", 1);
 	return (str);
@@ -45,7 +45,6 @@ char *rev_print(char *str)
 int main(void)
 {
 	rev_print("Hello world");
-	write (1, "\n", 1);
 }
 
 /*Assignment name  : rev_print

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ulstr.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 10:19:18 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/18 13:45:17 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:16:43 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ int main(int argc, char **argv)
 	int	i;
 
 	i = 0;
-	if (argc == 2)  //validação do argc
+	if (argc == 2)
 	{
 		while (argv[1][i] != '\0')
 		{
-			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')  //verifica se é letra minusc.
-				argv[1][i] -= 32;  //faz a conversao
-			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')  //verifica se letra maiusc.
-				argv[1][i] += 32;  //faz a conversao
-			write(1, &argv[1][i], 1);  //printa a letra já convertida
-			i++;  //avança pro proximo char
+			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+				argv[1][i] -= 32;
+			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
+				argv[1][i] += 32;
+			write(1, &argv[1][i], 1);
+			i++;
 		}
 	}
 	write(1, "\n", 1);  // n esquecer

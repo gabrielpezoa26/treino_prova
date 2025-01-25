@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hidenp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:33:08 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 16:42:42 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:55:53 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 int main(int argc, char **argv)
 {
-	int i;  //percorreo  argv[1]
-	int j;  //percorre o argv[2]
+	int i;
+	int j;
 
 	i = 0;
 	j = 0;
-	if (argc == 3)  //valicacao do argc
+	if (argc == 3)
 	{
-		while (argv[2][j] && argv[1][i])  //enquanto n for nulo
+		while (argv[2][j] && argv[1][i])
 		{
 			if (argv[2][j] == argv[1][i])
-				i++;               //se o char for igual, avança pro proximo dentro do argv[1]
-			j++;                   //se n for igual passa pro proximo char do argv[2]
+				i++;
+			j++;
 		}
 		if (argv[1][i] == '\0')
 			write(1, "1", 1);
 		else if (argv[1][i] != '\0')
 			write(1, "0", 1);
 	}
-	write(1, "\n", 1);  //printa a quebra de linha
+	write(1, "\n", 1);
 	return (0);
 }
 

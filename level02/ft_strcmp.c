@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 15:52:06 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 22:46:04 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/25 17:34:37 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_strcmp(char *s1, char *s2)
 }
 
 /*
-	uma variavel so, percorrer as duas || ;
+	percorrer as duas || ;
 	hora q der diferença ja retorna a propria diferença ;
 	se nao, retorna 0
 */

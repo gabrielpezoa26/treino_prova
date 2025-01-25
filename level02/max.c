@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 19:33:43 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/24 18:25:50 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/25 17:48:50 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ int	ft_max(int *tab, unsigned int len)
 	unsigned int	index;
 	unsigned		max_value;
 
-	if (!tab || len == 0)  //tratativa de erro
+	if (!tab || len == 0)
 		return (0);
 	max_value = tab[0];
 	index = 1;
-	while (index < len)  //p percorrer todo o array
+	while (index < len)
 	{
-		if (tab[index] > max_value)  //se for maior, faz a troca
+		if (tab[index] > max_value)
 			max_value = tab[index];
 		index++;
 	}

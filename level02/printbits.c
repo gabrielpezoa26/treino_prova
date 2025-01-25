@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   printbits.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 18:35:25 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/23 18:21:19 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:49:23 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	print_bits(unsigned char octet)
 {

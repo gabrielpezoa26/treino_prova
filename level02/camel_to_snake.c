@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camel_to_snake.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 13:41:30 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/19 11:55:28 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 17:32:44 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ int main(int argc, char **argv)
 		{
 			if(argv[1][i] >= 'A' && argv[1][i] <= 'Z')
 			{
-				argv[1][i] += 32;  //converte pra lowercase
+				argv[1][i] += 32;
 				write (1, "_", 1);
 			}
-			write(1, &argv[1][i], 1);  //printa o char atual
-			i++;                      //avanca
+			write(1, &argv[1][i], 1);
+			i++;
 		}
 	}
-	write (1, "\n", 1);  //printa a quebra de linha independente do argc
+	write (1, "\n", 1);
 	return (0);
 }
 
