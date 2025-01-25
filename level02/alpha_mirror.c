@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 20:30:42 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/16 15:40:20 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 11:04:55 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,23 @@ int main(int argc, char **argv)
 	int i;
 
 	i = 0;
-	if (argc == 2)  //validaçao do argc
+	if (argc == 2)
 	{
-		while(argv[1][i])  // enqt a posic do argv for diferente de nulo
+		while(argv[1][i])
 		{
 			if(argv[1][i] >= 'a' && argv[1][i] <= 'z')
 			{
-				argv[1][i] = ('a' + 'z') - argv[1][i];  //faz o "espelhamento"
+				argv[1][i] = ('a' + 'z') - argv[1][i];
 			}
 			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
 			{
-				argv[1][i] = ('A' + 'Z') - argv[1][i];  //faz o "espelhamento"
+				argv[1][i] = ('A' + 'Z') - argv[1][i];
 			}
-			write(1, &argv[1][i], 1);  //printa o char da posicao e dps passa pro prox
+			write(1, &argv[1][i], 1);
 			i++;
 		}
 	}
-	write (1,"\n",1);  //quebra d linha N ESQUECER GABRIEL
+	write (1,"\n",1);
 	return (0);
 }
 

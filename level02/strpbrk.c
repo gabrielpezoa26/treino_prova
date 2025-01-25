@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 14:06:34 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 13:29:04 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 12:54:27 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@ char *ft_strpbrk(const char *s1, const char *s2)
 {
 	int i;
 
-	if (!s1 || !s2)  //tratativa de erro
+	if (!s1 || !s2)
 		return (0);
-	while(*s1 != NULL)  //enqt n apontar pra null
+	while(*s1 != NULL)
 	{
 		i = 0;
-		while(s2[i] != '\0')  //percorre a s2 inteira
+		while(s2[i] != '\0')
 		{
-			if(*s1 == s2[i])  //se for igual retorna o ponteiro
+			if(*s1 == s2[i])
 				return (char *)s1;
-			i++;                //itera pelo s2
+			i++;
 		}
-		s1++;       //itera pelo s1 dps q todos os char de s2 foram comparados c o atual de s1
+		s1++;
 	}
 	return (NULL);
 }

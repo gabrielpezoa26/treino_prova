@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:56:39 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/23 18:41:15 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 13:22:21 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 char	**ft_split(char *str)
 {
 	char **result;
-	int i;  //percorre a string str
-	int j;  //guarda a posiçao no char **array
-	int k;  //guarda a posicao de cada palavra
+	int i;
+	int j;
+	int k;
 
 	i = 0;
 	j = 0;

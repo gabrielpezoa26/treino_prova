@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   range.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:11:58 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/24 22:30:31 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/25 12:50:37 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ int	*ft_range(int start, int end)
 	dest = (int *)malloc((end - start) * sizeof(int));
 	if(dest == NULL)
 		return(NULL);
+
 	if (start >= end)
 		return (NULL);
+
 	else if (start < end)
 	{
 		while ((start + i) <= end)

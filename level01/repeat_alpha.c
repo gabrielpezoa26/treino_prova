@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:39:03 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/17 10:53:56 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/25 13:15:36 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int main(int argc, char **argv)
 	int	i;
 	int	repeat_count;
 
-	if (argc == 2)  //validaçao do argc
+	if (argc == 2)
 	{
 		i = 0;
-		while (argv[1][i])  //percorre argv[1][i] inteiro
+		while (argv[1][i])
 		{
 			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
 			{
@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 			i++;
 		}
 	}
-	write(1, "\n", 1);  //n esquecer
+	write(1, "\n", 1);
 	return (0);
 }
 

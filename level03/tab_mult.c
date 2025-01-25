@@ -32,27 +32,27 @@ static int	ft_atoi(char *str)
 
 int	main(int argc, char **argv)
 {
-	int	i;
-	int	nbr;
+	int	potato;
+	int i;
 
 	if (argc != 2)
 		write(1, "\n", 1);
 	else
 	{
-		i = 1;  
-		nbr = ft_atoi(argv[1]);
-		while (i <= 9)
+		potato = ft_atoi(argv[1]);
+		i = 1;
+		while(i <= 9)
 		{
-			ft_putnbr(i);  //1º numero 
-			write(1, " x ", 3);
-			ft_putnbr(nbr);  //numero do parametro
+			ft_putnbr(potato);
+			write (1, " x ", 3);
+			ft_putnbr(i);
 			write(1, " = ", 3);
-			ft_putnbr(i * nbr);  //resultado
+			ft_putnbr((potato * i));
 			write(1, "\n", 1);
 			i++;
 		}
+		write(1, "\n", 1);
 	}
-	return (0);
 }
 
 /*
@@ -94,4 +94,32 @@ $>
 $>./tab_mult | cat -e
 $
 $>
+*/
+
+
+/*
+int	main(int argc, char **argv)
+{
+	int	i;
+	int	nbr;
+
+	if (argc != 2)
+		write(1, "\n", 1);
+	else
+	{
+		i = 1;  
+		nbr = ft_atoi(argv[1]);
+		while (i <= 9)
+		{
+			ft_putnbr(i);  //1º numero 
+			write(1, " x ", 3);
+			ft_putnbr(nbr);  //numero do parametro
+			write(1, " = ", 3);
+			ft_putnbr(i * nbr);  //resultado
+			write(1, "\n", 1);
+			i++;
+		}
+	}
+	return (0);
+}
 */
