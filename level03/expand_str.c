@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expand_str.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:11:47 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/23 16:21:58 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/24 22:30:16 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,29 @@
 int	main(int argc, char **argv)
 {
 	int i;
-	int flag;  //vê se precisa do espaço ou não
+	int flag;
 
-	if (argc == 2)  //verificação do argc
+	if (argc == 2)
 	{
 		i = 0;
 		flag = 0;
-		while (argv[1][i] == ' ' || argv[1][i] == '\t')  //só percorre espaço/tabs antes do argv[1]
+		while (argv[1][i] == ' ' || argv[1][i] == '\t')
 			i++;
-		while (argv[1][i] != '\0')  //percorre argv[1] inteiro
+		while (argv[1][i] != '\0')
 		{
-			if (argv[1][i] == ' ' || argv[1][i] == '\t')  //marca se precisa de espaço ou nao
+			if (argv[1][i] == ' ' || argv[1][i] == '\t')
 				flag = 1;
-			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))  //se o char n for espaço é pq chegou na "frase"
+			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))
 			{
-				if (flag != 0)  //poe os 3 espaços se necessário
+				if (flag != 0)
 					write(1, "   ", 3);
-				flag = 0;    //reseta a flag
-				write(1, &argv[1][i], 1);  //printa o char atual
+				flag = 0;
+				write(1, &argv[1][i], 1);
 			}
 			i++;
 		}
 	}
-	write(1, "\n", 1);  //n esquecer da quebra de linha
+	write(1, "\n", 1);
 }
 
 /*
