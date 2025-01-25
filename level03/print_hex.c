@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_hex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 15:54:57 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/23 16:26:06 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/24 21:31:44 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 int	ft_atoi(char *str)
 {
-	int n;
+	int number;
 
-	n = 0;
+	number = 0;
 	while (*str != '\0')
 	{
-		n = n * 10;
-		n = n + *str - '0';
+		number *= 10;
+		number = number + *str - '0';
 		str++;
 	}
-	return (n);
+	return (number);
 }
 
 void	ft_printhex(int n)

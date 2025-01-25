@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rev_wstr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 15:01:12 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/23 16:21:22 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/24 19:56:34 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,27 +23,27 @@ int main(int argc, char **argv)
 	i = 0;
 	if (argc == 2) // valicaçao argc
 	{
-		while(argv[1][i] != '\0')  //percorre o argv[1] inteiro, p começar de tras p frente
+		while(argv[1][i] != '\0')
 			i++;
-		while(i >= 0)  //começa a iterar, de tras p frente
+		while(i >= 0)
 		{
-			while(argv[1][i] == '\0' || argv[1][i] == ' ' || argv[1][i] == '\t')  //tira o espaço em branco depois da string
-				i--;  //tira o espaço em branco depois da string
-			end = i; //marca o ultimo char 
-			while(argv[1][i] && argv[1][i] != ' ' && argv[1][i] != '\t')  //percorre a palavra ate o primeiro char
+			while(argv[1][i] == '\0' || argv[1][i] == ' ' || argv[1][i] == '\t')
 				i--;
-			start = i + 1;  //marca o primeiro char da palavra atual
+			end = i;
+			while(argv[1][i] && argv[1][i] != ' ' && argv[1][i] != '\t')
+				i--;
+			start = i + 1;
 			flag = start;
-			while(start <= end)  //printa os bagui
+			while(start <= end)
 			{
 				write (1, &argv[1][start],1);
 				start++;
 			}
-			if (flag != 0)  //adiciona um espaço se precisar
+			if (flag != 0)
 				write(1, " ", 1);
 		}
 	}
-	write(1, "\n", 1);  //n esquecer da quebra de linha
+	write(1, "\n", 1);
 }
 
 /*Assignment name  : rev_wstr
