@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lastword.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 15:43:56 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/25 17:46:44 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/26 09:14:37 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	last_word(char *str)
 			j = i + 1;
 		i++;
 	}
-	while (str[j] >= 33 && str[j] <= 127)
+	while (str[j] >= 33 && str[j] <= 126)
 	{
 		write(1, &str[j], 1);
 		j++;
