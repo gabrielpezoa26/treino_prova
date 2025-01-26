@@ -6,11 +6,12 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 15:43:56 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/26 09:14:37 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/26 13:55:02 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 void	last_word(char *str)
 {
@@ -21,10 +22,11 @@ void	last_word(char *str)
 	j = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] == ' ' && str[i + 1] >= 33 && str[i + 1] <= 126)
+		if (str[i] == ' ' || str[i] == '\t' && str[i + 1] >= 33 && str[i + 1] <= 126)
 			j = i + 1;
 		i++;
 	}
+	printf("%d", j);  //teste
 	while (str[j] >= 33 && str[j] <= 126)
 	{
 		write(1, &str[j], 1);
