@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 20:30:42 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/26 09:09:59 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/26 14:04:20 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ Allowed functions: write
 --------------------------------------------------------------------------------
  
 Write a program called alpha_mirror that takes a string and displays this string
+$>./alpha_mirror | cat -e
 after replacing each alphabetical character by the opposite alphabetical
 character, followed by a newline.
  
@@ -65,6 +66,7 @@ zyx
 $>./alpha_mirror "My horse is Amazing." | cat -e
 Nb slihv rh Znzarmt.$
 $>./alpha_mirror | cat -e
+
 $
 $>
 */
