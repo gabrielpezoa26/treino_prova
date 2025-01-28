@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:11:58 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/25 12:50:37 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/28 17:53:49 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,12 @@ int	main(void)
 	int	start;
 	int	*kartoffel;
 
-	start = 3;
-	end = 10;
+	start = -1;
+	end = 2;
 	j = 0;
 	if (start == end)
 		return (1);
-	kartoffel = ft_range(start, end);/* condition */
+	kartoffel = ft_range(start, end);
 	while (j != (end - start + 1))
 	{
 		printf("%d\n", kartoffel[j]);

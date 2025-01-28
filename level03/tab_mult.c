@@ -13,11 +13,9 @@ static void	ft_putnbr(int n)
 static int	ft_atoi(char *str)
 {
 	int	result;
-	int	sign;
 	int i = 0;
 
 	result = 0;
-	sign = 1;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == '+')
@@ -27,27 +25,27 @@ static int	ft_atoi(char *str)
 		result = (result * 10) + str[i] - '0';
 		i++;
 	}
-	return (sign * result);
+	return (result);
 }
 
 int	main(int argc, char **argv)
 {
-	int	potato;
+	int	number;
 	int i;
 
 	if (argc != 2)
 		write(1, "\n", 1);
 	else
 	{
-		potato = ft_atoi(argv[1]);
+		number = ft_atoi(argv[1]);
 		i = 1;
 		while(i <= 9)
 		{
-			ft_putnbr(potato);
+			ft_putnbr(number);
 			write (1, " x ", 3);
 			ft_putnbr(i);
 			write(1, " = ", 3);
-			ft_putnbr((potato * i));
+			ft_putnbr((number * i));
 			write(1, "\n", 1);
 			i++;
 		}

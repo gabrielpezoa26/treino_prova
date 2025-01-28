@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 11:30:00 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/19 11:42:28 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/28 18:27:14 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void sort_int_tab(int *tab, unsigned int size)
 
 int	main(void)
 {
-	int	*potato= {1, 5 ,3};
+	int	potato[] = {1, 5 ,3};
 	
 	printf("%d", sort_int_tab(potato, 3));
 }

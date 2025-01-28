@@ -6,12 +6,12 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:42:33 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/23 18:15:08 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/28 18:05:29 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
+//ybatata arrOz feIJao
 int	main(int argc, char **argv)
 {
 	int i;
