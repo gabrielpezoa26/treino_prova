@@ -1,49 +1,34 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   expand.c                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/19 14:59:39 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/29 15:44:58 by gcesar-n         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <unistd.h>
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	int i;
-	int flag;
+	int	i = 0;
+	int	flag = 0;
 
 	if (argc == 2)
 	{
-		i = 0;
-		flag = 0;
 		while (argv[1][i] == ' ' || argv[1][i] == '\t')
 			i++;
 		while (argv[1][i] != '\0')
 		{
 			if (argv[1][i] == ' ' || argv[1][i] == '\t')
 				flag = 1;
-			if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))
+			if (argv[1][i] != ' ' && argv[1][i] != '\t')
 			{
 				if (flag != 0)
-					write(1, "   ", 3);
-				flag = 0;
-				write(1, &argv[1][i], 1);
+				{
+					write(1, "yyy", 3);
+					flag = 0;
+				}
+				write(1, &argv[1][i], 1);	
 			}
+			// write(1, &argv[1][i], 1);
 			i++;
 		}
 	}
 	write(1, "\n", 1);
 }
 
-/*
-	obs:dois whiles, tres ifs; (!(dasdsa))
-	resetar a flag dps do if
-*/
 /*
 Assignment name  : expand_str
 Expected files   : expand_str.c
