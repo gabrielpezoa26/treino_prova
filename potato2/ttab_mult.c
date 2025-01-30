@@ -10,7 +10,7 @@ void	ft_putnbr(int nbr)
 	number = (nbr % 10) + '0';
 	write(1, &number, 1);
 }
-int ft_atoi(char *str)
+int ft_simple_atoi(char *str)
 {
 	int	number;
 	int	i;
@@ -36,7 +36,7 @@ int	main(int argc, char **argv)
 	else
 	{
 		i = 1;
-		number = ft_atoi(argv[1]);
+		number = ft_simple_atoi(argv[1]);
 		while(i <= 9)
 		{
 			ft_putnbr(number);

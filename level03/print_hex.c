@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   print_hex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 15:54:57 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/24 21:31:44 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/30 13:45:33 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_atoi(char *str)
+int	ft_simple_atoi(char *str)
 {
 	int number;
 
@@ -38,7 +38,7 @@ void	ft_printhex(int n)
 int	main(int argc, char **argv)
 {
 	if (argc == 2)
-		ft_printhex(ft_atoi(argv[1]));
+		ft_printhex(ft_simple_atoi(argv[1]));
 	write(1, "\n", 1);
 }
 

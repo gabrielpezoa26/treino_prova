@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   rrcapitalizer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 20:34:24 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/20 21:04:28 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/30 12:42:59 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	rstr_capitalize(char *str)
+static void	rstr_capitalizer(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -22,27 +22,19 @@ void	rstr_capitalize(char *str)
 		if (str[i] >= 'A' && str[i] <= 'Z')
 			str[i] += 32;
 		if ((str[i] >= 'a' && str[i] <= 'z') && (str[i + 1] == ' ' || str[i + 1] == '\t' || str[i + 1] == '\0'))
-			str[i] -= 32;
+			str[i] -= 32;  
 		write(1, &str[i], 1);
 		i++;
 	}
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	int i;
-
-	i = 1;
-	if (argc < 2)
-	{
+	if (argc != 2)
 		write(1, "\n", 1);
-		return (0);
-	}
-	while (i < argc)
+	else
 	{
-		rstr_capitalize(argv[i]);
-		write(1, "\n", 1);
-		i++;
+		rstr_capitalizer(argv[1]);
 	}
 }
 

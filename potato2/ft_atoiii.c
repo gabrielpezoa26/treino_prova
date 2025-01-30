@@ -4,9 +4,10 @@
 int	ft_atoi(const char *str)
 {
 	int	signal = 1;
-	int result = 0;
+	int	number;
 
-	while(*str >= 9 && *str <= 13 || *str == 32 || *str == '+')
+	number = 0;
+	while(*str == ' ' || *str == '\t' || *str == '+')
 		str++;
 	if (*str == '-')
 	{
@@ -15,15 +16,15 @@ int	ft_atoi(const char *str)
 	}
 	while(*str >= '0' && *str <= '9')
 	{
-		result = result * 10 + (*str - '0');
+		number = (number * 10) + (*str - '0');
 		str++;
 	}
-	return (result * signal);
+	return (number * signal);
 }
 
 int	main()
 {
-	char	*string = "+123";
+	char	*string = "-123";
 
 	printf("%d\n", ft_atoi(string));
 	printf("func orig: %d\n", atoi(string));
