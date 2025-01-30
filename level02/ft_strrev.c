@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 20:12:28 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/26 09:13:26 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/29 18:45:22 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ char	*ft_strrev(char *str)
 	len = 0;
 	while (str[len] != '\0')
 		len++;
+	
 	end = len - 1;
 	i = 0;
 	while (i < end)
