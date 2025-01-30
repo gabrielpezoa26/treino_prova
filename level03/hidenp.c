@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   hidenp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:33:08 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/25 17:55:53 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/30 15:14:11 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
 	if (argc == 3)
 	{
-		while (argv[2][j] && argv[1][i])
+		while (argv[2][j] != '\0' && argv[1][i] != '\0')
 		{
 			if (argv[2][j] == argv[1][i])
 				i++;
@@ -29,20 +29,11 @@ int main(int argc, char **argv)
 		}
 		if (argv[1][i] == '\0')
 			write(1, "1", 1);
-		else if (argv[1][i] != '\0')
+		else
 			write(1, "0", 1);
 	}
 	write(1, "\n", 1);
-	return (0);
 }
-
-/*
-	dois iteradores; argc == 3; itera pelos dois argv; se o char for igual i++, se nao j++ ;
-	qdo chegar no final de argv[1] printa 1; 
-*/
-
-
-
 
 /*Assignment name  : hidenp
 Expected files   : hidenp.c

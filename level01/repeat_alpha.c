@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   repeat_alpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 17:39:03 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/25 16:58:35 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/01/30 15:20:14 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,12 @@ int main(int argc, char **argv)
 	if (argc == 2)
 	{
 		i = 0;
-		while (argv[1][i])
+		while (argv[1][i] != '\0')
 		{
 			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
 				count = argv[1][i] - 'a' + 1;
 			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
 				count = argv[1][i] - 'A' + 1;
-			else
-				count = 1;
 			while (count > 0)
 			{
 				write(1, &argv[1][i], 1);
