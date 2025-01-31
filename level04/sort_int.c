@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:49:41 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/25 09:20:08 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/31 15:58:52 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void sort_int_tab(int *tab, unsigned int size)
 {
-	unsigned int	i;
+	int	i;
 	int				temp;
 
 	i = 0;
