@@ -13,8 +13,9 @@ static void	ft_putnbr(int n)
 static int	ft_simple_atoi(char *str)
 {
 	int	result;
-	int i = 0;
+	int i;
 
+	i = 0;
 	result = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;

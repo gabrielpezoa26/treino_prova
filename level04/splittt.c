@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   splittt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 18:26:43 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/23 18:28:08 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/31 19:16:37 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
-
 
 static size_t	ft_countwords(char const *s, char delimeter)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_list.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 18:24:17 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/30 15:45:32 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/01/31 19:17:02 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ t_list *sort_list(t_list* lst, int (*cmp)(int, int))
 		if ((*cmp)(lst->data, lst->next->data) == 0)
 		{
 			temp = lst->data;
-			lst->data = lst->next->data;  //swap
+			lst->data = lst->next->data;
 			lst->next->data = temp;
 
-			lst = start;  //reseta
+			lst = start;
 		}
 	else
-		lst = lst->next;  // "i++"
+		lst = lst->next;
 	}
 	return (start);
 }
