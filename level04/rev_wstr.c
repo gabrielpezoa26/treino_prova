@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   rev_wstr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 15:01:12 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/25 17:57:12 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/01 13:11:16 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
 
 int main(int argc, char **argv)
 {
@@ -21,7 +20,7 @@ int main(int argc, char **argv)
 	int i = 0;
 
 	i = 0;
-	if (argc == 2
+	if (argc == 2)
 	{
 		while(argv[1][i] != '\0')
 			i++;
@@ -30,9 +29,11 @@ int main(int argc, char **argv)
 			while(argv[1][i] == '\0' || argv[1][i] == ' ' || argv[1][i] == '\t')
 				i--;
 			end = i;
-			while(argv[1][i] && argv[1][i] != ' ' && argv[1][i] != '\t')
+
+			while(argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
 				i--;
 			start = i + 1;
+
 			flag = start;
 			while(start <= end)
 			{

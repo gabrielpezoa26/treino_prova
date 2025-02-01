@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   splittt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 18:26:43 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/31 19:16:37 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/01 11:40:11 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,13 @@ char	**ft_split(char const *s, char c)
 
 	if (s == NULL)
 		return (NULL);
+
 	word_count = ft_countwords(s, c);
 	result = malloc((word_count + 1) * sizeof(char *));
+	
 	if (result == NULL || ft_fillwords(result, s, c))
 		return (NULL);
+
 	result[word_count] = NULL;
 	return (result);
 }

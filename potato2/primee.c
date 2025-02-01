@@ -1,37 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 int	main(int argc, char **argv)
 {
+	int	i;
 	int	number;
-	int	potato;
 
 	if (argc == 2)
 	{
+		i = 2;
 		number = atoi(argv[1]);
-		potato = 2;
 		if (number == 1)
 			printf("1");
-
-		while (number > 1)
+		while(number > 1)
 		{
-			if (number % potato == 0)
-			{
-				printf("%d", potato);
-				number /= potato;
-				if (number > 1)
-					printf("*");
-			}
-			else 
-				potato++;
+			if (number % i == 0)
+				{
+					printf("%d", i);
+					number /= i;
+					if (number > 1)
+						printf("*");
+				}
+			i++;
 		}
 	}
 	printf("\n");
 }
-
-
 /*Assignment name  : fprime
 Expected files   : fprime.c
 Allowed functions: printf, atoi

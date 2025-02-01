@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list_remove.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 12:56:06 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/25 17:56:52 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/01 11:39:17 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 	
 	if (begin_list == NULL || *begin_list == NULL)
 		return ;
+
 	current_node = *begin_list;
 	if (cmp(current_node->data, data_ref) == 0)
 	{

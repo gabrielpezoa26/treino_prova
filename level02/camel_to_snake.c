@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camel_to_snake.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 13:41:30 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/25 17:32:44 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/01 10:51:14 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 	i = 0;
 	if (argc == 2)
 	{
-		while(argv[1][i])
+		while(argv[1][i] != '\0')
 		{
 			if(argv[1][i] >= 'A' && argv[1][i] <= 'Z')
 			{

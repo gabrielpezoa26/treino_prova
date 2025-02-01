@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 17:56:39 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/25 13:22:21 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/01 11:58:38 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,47 +16,40 @@
 
 char	**ft_split(char *str)
 {
-	char **result;
-	int i;
-	int j;
-	int k;
+	char **array;
+	int	i = 0;  //index geral
+	int	j = 0;  //index da palavra
+	int k = 0;  //index da letra cada palavra
 
-	i = 0;
-	j = 0;
-	result = malloc(WD_LEN);
-	while (str[i] != '\0')
+	array = malloc(WD_LEN);
+	while(str[i] != '\0')
 	{
 		if (str[i] > 32)
 		{
 			k = 0;
-			result[j] = malloc(WD_LEN);
-			while (str[i] > 32)
-			{
-				result[j][k] = str[i];
-				j++;
-				i++;
-			}
-		result[j][k] = '\0';
-		j++;
+			array[j] = malloc(WD_LEN);
+			while(str[i] > 32)
+				array[j][k++] = str[i++];
+			array[j++][k] = '\0';
 		}
 		else
 			i++;
 	}
-	result[j] = NULL;
-	return (result);
+	array[j] = NULL;
+	return (array);
 }
 
 //teste
 int	main(void)
 {
 	char *beans;
-	beans = "hello  aaa  bbb";
+	beans = "hello aaa bbb";
 	char **kartoffel;
 	
 	kartoffel = ft_split(beans);
-	printf("%s\n", kartoffel[0]);
-	printf("%s\n", kartoffel[1]);
-	printf("%s\n", kartoffel[2]);
+	printf("%s", kartoffel[0]);
+	printf("%s", kartoffel[1]);
+	printf("%s", kartoffel[2]);
 }
 
 /*Assignment name  : ft_split
