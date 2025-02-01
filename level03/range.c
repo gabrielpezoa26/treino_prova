@@ -3,39 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   range.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:11:58 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/30 13:07:39 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/01 19:02:26 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
+#include <stdlib.h>
+
 int	*ft_range(int start, int end)
 {
 	int	i;
-	int	*dest;
+	int	size;
+	int	*result;
 
 	i = 0;
-	dest = (int *)malloc((end - start) * sizeof(int));
-	if(dest == NULL)
-		return(NULL);
-
-	if (start >= end)
-		return (NULL);
-
-	else if (start < end)
+	if (start < end)
+		size = end - start + 1;
+	else
+		size = start - end + 1;
+	result = (int *)malloc(sizeof(int) * size);
+	if (result == NULL)
+		return NULL;
+	while (i < size)
 	{
-		while ((start + i) <= end)
-		{
-			dest[i] = start + i;
-			i++;
-		}
+		result[i] = start;
+		if (start < end)
+			start++;
+		else
+			start--;
+		i++;
 	}
-	return (dest);
+
+	return result;
 }
+
 
 //teste
 int	main(void)

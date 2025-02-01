@@ -3,47 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   rrange.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:04:17 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/01 16:18:50 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/01 18:54:43 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
-int	*ft_rrange(int start, int end)
+int *ft_rrange(int start, int end)
 {
-	int *range;
+	int *result;
 	int i = 0;
-	int step = 1;
-	int n = end - start;
+	int size;
 
-	if (n < 0)
-		(n *= -1);
-	n++;
-	range = (int *)malloc(sizeof(int) * n);
-	if (range)
+	size = end - start + 1;
+	if (start > end)
+		return (ft_rrange(end, start));
+	result = (int *)malloc(sizeof(int) * size);
+	if (result != 0)
 	{
-		if (start < end)
-			step = -1;
-		while (i < n)
+		while (i < size)
 		{
-			range[i] = end;
-			end = end + step;
+			result[i] = end;
+			end--;
 			i++;
 		}
 	}
-	return (range);
+	return (result);
 }
-
-/*
-	4 variaveis (o result, iterador, flag, e 'n');  valida 'n';  faz o malloc;
-	
-*/
-
-
 
 //teste
 int	main(void)
