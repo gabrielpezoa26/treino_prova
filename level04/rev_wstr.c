@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 15:01:12 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/01 13:11:16 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/04 17:48:16 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int main(int argc, char **argv)
 			while(argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
 				i--;
 			start = i + 1;
-
 			flag = start;
 			while(start <= end)
 			{

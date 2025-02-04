@@ -14,7 +14,6 @@ int	main(int argc, char **argv)
 		potato = 2;
 		if (number == 1)
 			printf("1");
-
 		while (number > 1)
 		{
 			if (number % potato == 0)
