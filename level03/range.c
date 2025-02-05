@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   range.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 13:11:58 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/01 19:02:26 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/05 16:08:47 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ int	main(void)
 	int	start;
 	int	*kartoffel;
 
-	start = -1;
-	end = 2;
+	start = 3;
+	end = 1;
 	j = 0;
 	if (start == end)
 		return (1);
