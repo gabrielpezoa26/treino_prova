@@ -3,11 +3,37 @@
 char	*ft_itoa(int nbr)
 {
 	int size;
+	int n;
+	int len;
+	char *result;
 
-	while(nbr > 0)
+	if (nbr == -2147483648)
+		return ("2147483648\0")
+	n = nbr;
+	len = 0;
+	while(nbr < 0)
+		len++;
+	while(n != 0)
 	{
-		
+		n /= 10;
+		len++;
 	}
+
+	result = (char *)malloc(sizeof(char) * (len + 1));
+	if (!result)
+		return (NULL);
+
+	result[len] = '\0';
+	if (nbr == 0)
+	{	
+		result[0] = '0';
+		return (result);
+	}
+	if (nbr < 0)
+	{
+		result[0] = '-';	
+	}
+
 }
 
 
