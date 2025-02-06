@@ -1,3 +1,17 @@
+#include <stdlib.h>
+
+char	*ft_itoa(int nbr)
+{
+	int size;
+
+	while(nbr > 0)
+	{
+		
+	}
+}
+
+
+
 /*
 Assignment name  : ft_itoa
 Expected files   : ft_itoa.c
