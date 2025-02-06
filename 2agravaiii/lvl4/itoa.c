@@ -11,8 +11,10 @@ char	*ft_itoa(int nbr)
 		return ("2147483648\0")
 	n = nbr;
 	len = 0;
+
 	while(nbr < 0)
 		len++;
+
 	while(n != 0)
 	{
 		n /= 10;
@@ -30,10 +32,13 @@ char	*ft_itoa(int nbr)
 		return (result);
 	}
 	if (nbr < 0)
+		result[0] = '-';
+	if (nbr > 0)
 	{
-		result[0] = '-';	
+		result[--len] = (nbr % 10) + '0';
+		nbr /= 10;
 	}
-
+	return (result);
 }
 
 
