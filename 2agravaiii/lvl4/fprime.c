@@ -1,38 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio.h>
-#include <stdlib.h>
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	int	number;
-	int	potato;
+	int number;
+	int index;
 
 	if (argc == 2)
 	{
 		number = atoi(argv[1]);
-		potato = 2;
 		if (number == 1)
 			printf("1");
-
+		index = 2;
 		while (number > 1)
 		{
-			if (number % potato == 0)
+			if (number % index == 0)
 			{
-				printf("%d", potato);
-				number /= potato;
+				printf("%d", index);
+				number /= index;
 				if (number > 1)
 					printf("*");
 			}
-			else 
-				potato++;
+			else
+				index++;
 		}
 	}
 	printf("\n");
 }
 
-
-/*Assignment name  : fprime
+/*
+Assignment name  : fprime
 Expected files   : fprime.c
 Allowed functions: printf, atoi
 --------------------------------------------------------------------------------
@@ -65,4 +62,5 @@ $> ./fprime | cat -e
 $
 $> ./fprime 42 21 | cat -e
 $
+
 */
