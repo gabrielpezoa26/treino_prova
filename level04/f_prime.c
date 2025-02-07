@@ -6,26 +6,27 @@
 int	main(int argc, char **argv)
 {
 	int	number;
-	int	potato;
+	int	index;
 
 	if (argc == 2)
 	{
 		number = atoi(argv[1]);
-		potato = 2;
+		index = 2;
 		if (number == 1)
 			printf("1");
 
 		while (number > 1)
 		{
-			if (number % potato == 0)
+			if (number % index == 0)
 			{
-				printf("%d", potato);
-				number /= potato;
+				printf("%d", index);
+				number /= index;
+				
 				if (number > 1)
 					printf("*");
 			}
 			else 
-				potato++;
+				index++;
 		}
 	}
 	printf("\n");

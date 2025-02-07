@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 15:43:56 by gabriel           #+#    #+#             */
-/*   Updated: 2025/01/29 18:16:52 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/07 10:56:30 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	last_word(char *str)
 			j = i + 1;
 		i++;
 	}
-	printf("%d", j);  //teste
 	while (str[j] >= 33 && str[j] <= 126)
 	{
 		write(1, &str[j], 1);

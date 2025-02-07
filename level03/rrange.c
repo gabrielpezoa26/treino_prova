@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rrange.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:04:17 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/01 18:54:43 by gabriel          ###   ########.fr       */
+/*   Updated: 2025/02/07 09:23:55 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ int *ft_rrange(int start, int end)
 	size = end - start + 1;
 	if (start > end)
 		return (ft_rrange(end, start));
+
 	result = (int *)malloc(sizeof(int) * size);
+	if (!result)
+		return (NULL);
+
 	if (result != 0)
 	{
 		while (i < size)

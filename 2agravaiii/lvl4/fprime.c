@@ -11,13 +11,14 @@ int main(int argc, char **argv)
 		number = atoi(argv[1]);
 		if (number == 1)
 			printf("1");
+
 		index = 2;
 		while (number > 1)
 		{
 			if (number % index == 0)
 			{
 				printf("%d", index);
-				number /= index;
+				number = number / index;
 				if (number > 1)
 					printf("*");
 			}

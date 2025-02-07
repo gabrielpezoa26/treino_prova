@@ -6,7 +6,7 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 18:49:41 by gabriel           #+#    #+#             */
-/*   Updated: 2025/02/01 09:27:06 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/07 13:31:20 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void sort_int_tab(int *tab, unsigned int size)
 {
-	int	i;
+	unsigned int	i;
 	int	temp;
 
 	i = 0;
-	while (i < (size - 1))
+	while (i < size)
 	{
 		if (tab[i] > tab[i + 1])
 		{
@@ -27,11 +27,22 @@ void sort_int_tab(int *tab, unsigned int size)
 			tab[i + 1] = temp;
 			i = 0;
 		}
-		else
+		else 
 			i++;
-	}
+	}	
+		printf("%d\n", tab[0]);
+		printf("%d\n", tab[1]);
+		printf("%d\n", tab[2]);
+		printf("%d\n", tab[3]);
+		printf("%d\n", tab[4]);
 }
 
+int main()
+{
+	int array[] = {1, 25, 4, 7, 3};
+
+	sort_int_tab(array, 5);
+}
 ///
 /*
 	uma var temp e um iterador(unsigned);  compara 'i' com size - 1 (nulo);

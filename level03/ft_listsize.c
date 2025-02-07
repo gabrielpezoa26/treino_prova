@@ -6,11 +6,11 @@
 /*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 15:33:45 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/01/23 15:35:40 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/07 10:54:18 by gcesar-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft__list_size.h"
+#include "ft_list_size.h"
 
 int	ft_list_size(t_list *begin_list)
 {

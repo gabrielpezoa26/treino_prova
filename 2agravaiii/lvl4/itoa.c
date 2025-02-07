@@ -1,14 +1,15 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 char	*ft_itoa(int nbr)
 {
-	int size;
 	int n;
 	int len;
 	char *result;
 
 	if (nbr == -2147483648)
-		return ("2147483648\0")
+		return ("-2147483648");
+
 	n = nbr;
 	len = 0;
 
@@ -24,24 +25,30 @@ char	*ft_itoa(int nbr)
 	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return (NULL);
-
 	result[len] = '\0';
+
 	if (nbr == 0)
-	{	
+	{
 		result[0] = '0';
 		return (result);
 	}
 	if (nbr < 0)
 		result[0] = '-';
-	if (nbr > 0)
+	while (nbr) 
 	{
-		result[--len] = (nbr % 10) + '0';
+		result[--len] = nbr % 10 + '0';
 		nbr /= 10;
 	}
-	return (result);
+return (result);
+
 }
 
+int main()
+{
+	int potato = 123;
 
+	printf("%s\n", ft_itoa(potato));
+}
 
 /*
 Assignment name  : ft_itoa
