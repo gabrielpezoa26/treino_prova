@@ -53,11 +53,12 @@ int main(int argc, char **argv)
 	if (argc == 2)
 	{
 		number = ft_atoi(argv[1]);
+
 		sum = 0;
 		while (number > 0)
 		{
 			if (is_prime(number) != 0)
-				sum = sum + number;
+				sum += number;
 			number--;
 		}
 		ft_putnbr(sum);
