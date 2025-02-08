@@ -2,7 +2,7 @@
 
 void sort_int_tab(int *tab, unsigned int size)
 {
-	int	i;
+	unsigned int	i;
 	int temp;
 
 	i = 0;

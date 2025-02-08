@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rostring.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 20:06:27 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/01 13:22:13 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/07 22:01:01 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,16 @@ int main(int argc, char **argv)
 	int i;
 	int start;
 	int end;
-	int flag;
+	int flag = 0;
 
-	flag = 0;
 	if (argc > 1 && argv[1][0] != '\0')
 	{
 		i = 0;
 		while (argv[1][i] == ' ' || argv[1][i] == '\t')
 			i++;
+
 		start = i;
+
 		while (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
 			i++;
 		end = i;

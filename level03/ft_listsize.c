@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_listsize.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcesar-n <gcesar-n@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 15:33:45 by gcesar-n          #+#    #+#             */
-/*   Updated: 2025/02/07 10:54:18 by gcesar-n         ###   ########.fr       */
+/*   Updated: 2025/02/07 22:06:18 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_list_size(t_list *begin_list)
 	else
 		return (1 + ft_list_size(begin_list->next));
 }
-
+// trata erro;  1 + Farofa(Batata->Nhoque)
 /*
 Assignment name  : ft_list_size
 Expected files   : ft_list_size.c, ft_list.h
@@ -38,8 +38,8 @@ ft_list.h:
 
 typedef struct    s_list
 {
-    struct s_list *next;
-    void          *data;
+	struct s_list *next;
+	void          *data;
 }                 t_list;
 
 */

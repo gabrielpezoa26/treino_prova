@@ -2,13 +2,13 @@
 
 void	print_bits(unsigned char octet)
 {
-	int i;
+	int ieum;
 	unsigned char bit;
 	
-	i = 8;
-	while(i--)
+	ieum = 8;
+	while(ieum--)
 	{
-		bit = (octet >> i & 1) + '0';
+		bit = (octet >> ieum & 1) + '0';
 		write(1, &bit, 1);
 	}
 }
