@@ -13,6 +13,8 @@ int main(int argc, char **argv)
 			printf("1");
 
 		index = 2;
+
+
 		while (number > 1)
 		{
 			if (number % index == 0)
